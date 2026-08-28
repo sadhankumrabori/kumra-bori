@@ -1,62 +1,65 @@
 <!DOCTYPE html>
 <html lang="bn">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>খাঁটি কুমড়া বড়ি | রাণীনগর, নওগাঁ</title>
-  
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
-  
-  <style>
-    /* basic styles from original */
-    *{box-sizing:border-box;margin:0;padding:0;}
-    body{font-family:Arial, "Noto Sans Bengali", sans-serif;background:#fffaf0;color:#3d2b1f;line-height:1.7;}
-    header{background:linear-gradient(135deg,#7b3f00,#b86b16);color:white;text-align:center;padding:18px 15px}
-    header h1{font-size:30px;margin-bottom:4px;}
-    .hero{padding:55px 20px;text-align:center;background:#fff0cf}
-    .hero h2{font-size:34px;color:#713700;margin-bottom:12px}
-    .hero p{max-width:700px;margin:auto;font-size:16px;}
-    .btn{display:inline-block;margin:20px 7px 0;padding:12px 22px;border-radius:30px;text-decoration:none;font-weight:bold;}
-    .order{background:#198754;color:#fff;}.wa{background:#25d366;color:#fff;}
-    section{max-width:950px;margin:auto;padding:42px 20px}
-    section h2{text-align:center;color:#7b3f00;margin-bottom:22px;font-size:27px;}
-    .card{background:white;border-radius:16px;padding:25px;box-shadow:0 4px 18px rgba(0,0,0,0.12);}
-    
-    /* GAlLERY / SLIDER STYLES */
-    .swiper {width: 100%;height: auto;padding-bottom: 40px; }
-    .swiper-slide {display: flex;justify-content: center;align-items: center;}
-    .swiper-slide img {
-      width: 100%;
-      height: 300px; /* নির্দিষ্ট উচ্চতা স্লাইডারের জন্য */
-      object-fit: cover; /* ছবি যেন লম্বাটে না দেখায় */
-      border-radius: 12px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
-    }
-    
-    /* MOBILE OPTIMIZATION for Gallery */
-    @media (max-width: 600px) {
-      .swiper-slide img {height: 200px; }
-    }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>খাঁটি কুমড়া বড়ি | রাণীনগর, নওগাঁ</title>
 
-    .features{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
-    .feature{text-align:center;padding:22px;background:#fff;border-radius:14px;box-shadow:0 3px 14px rgba(0,0,0,0.010)}
-    .feature b{display:block;font-size:20px;color:#7b3f00;margin-bottom:6px;}
-    .contact{text-align:center;background:#7b3f00;color:white;border-radius:18px;}
-    .contact h2{color:#fff;}
-    footer{text-align:center;background:#3d2b1f;color:#fff;padding:20px;}
-    @media (max-width:650px){header h1{font-size:25px;}.hero h2{font-size:27px;}.features{grid-template-columns:1fr;}}
-  </style>
+<!-- Swiper Slider CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Arial,"Noto Sans Bengali",sans-serif;background:#fffaf0;color:#3d2b1f;line-height:1.7}
+header{background:linear-gradient(135deg,#7b3f00,#b86b16);color:white;text-align:center;padding:18px 15px}
+header h1{font-size:30px;margin-bottom:4px} header p{font-size:16px}
+.hero{padding:55px 20px;text-align:center;background:#fff0cf}
+.hero h2{font-size:34px;color:#713700;margin-bottom:12px}
+.hero p{max-width:700px;margin:auto;font-size:18px}
+.btn{display:inline-block;margin:20px 7px 0;padding:12px 22px;border-radius:30px;text-decoration:none;font-weight:bold}
+.order{background:#198754;color:#fff}.wa{background:#25d366;color:#fff}
+section{max-width:950px;margin:auto;padding:42px 20px}
+section h2{text-align:center;color:#7b3f00;margin-bottom:22px;font-size:27px}
+.card{background:white;border-radius:16px;padding:25px;box-shadow:0 4px 18px #00000012}
+.story{text-align:center;font-size:17px}
+
+/* Video & Slider Style */
+.video-container {text-align: center; margin: 25px 0;}
+.video-container video {width: 100%; max-width: 550px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.15);}
+
+.swiper {width: 100%; padding-top: 20px; padding-bottom: 45px;}
+.swiper-slide {display: flex; justify-content: center; align-items: center;}
+.swiper-slide img {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+}
+
+.features{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.feature{text-align:center;padding:22px;background:#fff;border-radius:14px;box-shadow:0 3px 14px #00000010}
+.feature b{display:block;font-size:20px;color:#7b3f00;margin-bottom:6px}
+.contact{text-align:center;background:#7b3f00;color:white;border-radius:18px}
+.contact h2{color:#fff}
+footer{text-align:center;background:#3d2b1f;color:#fff;padding:20px}
+
+@media(max-width:650px){
+  header h1{font-size:25px}.hero h2{font-size:27px}.features{grid-template-columns:1fr}
+  .swiper-slide img {height: 200px;}
+}
+</style>
 </head>
 <body>
 
 <header>
-  <h1>🍲 খাঁটি কুমড়া বড়ি</h1>
-  <p>🥕 নওগাঁর রাণীনগর - ঐতিহ্যের তিলে তিলে স্বাদ </p>
+  <h1>🌿 খাঁটি কুমড়া বড়ি</h1>
+  <p>নওগাঁর রাণীনগর • খট্টেশ্বরের ঐতিহ্যবাহী স্বাদ</p>
 </header>
 
 <div class="hero">
-  <h2>স্বা-াদের কোমল ছোঁয়া গাঁয়ে 🧡</h2>
-  <p>গঁায়ের প্রাকৃতিক গল্প ও ভালোবাসা দিয়ে তৈরি আমাদের খাঁটি কুমড়া বড়ি। স্বাদ বাঁচিয়ে, দৈনন্দিন রান্নায় আনে অন্যরকম স্বাদ।</p>
+  <h2>মা-বোনদের কোমল হাতের ছোঁয়ায় ❤️</h2>
+  <p>ঘরোয়া পদ্ধতিতে যত্ন ও ভালোবাসায় তৈরি আমাদের খাঁটি কুমড়া বড়ি। স্বাদে ঐতিহ্য, তৈরিতে মায়ের হাতের ভালোবাসা।</p>
   <a class="btn order" href="tel:01305601265">📞 অর্ডার করুন</a>
   <a class="btn wa" href="https://wa.me/8801737326621">💬 WhatsApp</a>
 </div>
@@ -64,31 +67,40 @@
 <section>
   <h2>আমাদের ঐতিহ্য</h2>
   <div class="card story">
-    <p>প্রথমে ভালো মানের মাসকলাই বাছাই করা হয়। এরপর গুণগত ভিত্তিতে বেছে নেওয়ার পর পরিবারের সবাই মিলে কঠোর খেটে বড়ির মিশ্রণ তৈরি করা হয়। শ-আচ্ছিনের ঠান্ডার মধ্য দিয়েই বড়িগুলোকে শুকিয়ে প্রস্তুত করা হয়। </p>
-    
+    <p>প্রথমে ভালো মানের মাসকলাই ভাঙানো হয়। এরপর রাতভর ভিজিয়ে রেখে ভোররাতে পরিবারের সবাই মিলে পাটায় বেটে বড়ির মিশ্রণ তৈরি করা হয়। মা-কাকিদের যত্নের হাতে চাটাইয়ে বড়ি দেওয়া হয় এবং দু’দিন রোদে শুকিয়ে তৈরি হয় আমাদের খাঁটি কুমড়া বড়ি।</p>
+
+    <!-- ভিডিও সেকশন -->
+    <div class="video-container">
+      <video controls poster="1797933102661.png">
+        <source src="InShot_20260829_002652318.mp4" type="video/mp4">
+        আপনার ব্রাউজারে ভিডিও চলবে না।
+      </video>
+    </div>
+
+    <!-- ছবি স্লাইডার -->
     <div class="swiper mySwiper">
       <div class="swiper-wrapper">
-        <div class="swiper-slide"><img src="1787845338733.png" alt="কুমড়া বড়ি ১"></div>
-        <div class="swiper-slide"><img src="1787846665694.png" alt="কুমড়া বড়ি ২"></div>
-        <div class="swiper-slide"><img src="1787847456076.png" alt="কুমড়া বড়ি ৩"></div>
-        <div class="swiper-slide"><img src="1787853947266.png" alt="কুমড়া বড়ি ৪"></div>
-        <div class="swiper-slide"><img src="1787882127604.png" alt="কুমড়া বড়ি ৫"></div>
-        <div class="swiper-slide"><img src="1787882603416.png" alt="কুমড়া বড়ি ৬"></div>
-        <div class="swiper-slide"><img src="1797933102661.png" alt="কুমড়া বড়ি ৭"></div>
+        <div class="swiper-slide"><img src="1787845338733.png" alt="কুমড়া বড়ি"></div>
+        <div class="swiper-slide"><img src="1787846665694.png" alt="কুমড়া বড়ি"></div>
+        <div class="swiper-slide"><img src="1787847456076.png" alt="কুমড়া বড়ি"></div>
+        <div class="swiper-slide"><img src="1787853947266.png" alt="কুমড়া বড়ি"></div>
+        <div class="swiper-slide"><img src="1787882127604.png" alt="কুমড়া বড়ি"></div>
+        <div class="swiper-slide"><img src="1787882603416.png" alt="কুমড়া বড়ি"></div>
+        <div class="swiper-slide"><img src="1797933102661.png" alt="কুমড়া বড়ি"></div>
       </div>
+      <div class="swiper-pagination"></div>
       <div class="swiper-button-next"></div>
       <div class="swiper-button-prev"></div>
-      <div class="swiper-pagination"></div>
     </div>
-    </div>
+  </div>
 </section>
 
 <section>
   <h2>কেন আমাদের কুমড়া বড়ি?</h2>
   <div class="features">
-    <div class="feature"><b>✨ খাঁটি</b> ঘরে তৈরি, পরিবারের যত্নে ঐতিহ্যবাহী পদ্ধতিতে তৈরি</div>
-    <div class="feature"><b>🌾 বড়ি স্বদ</b> মাসকলাই ও কুমড়ার সুন্দর সমন্বয়ে আসল স্বাদ।</div>
-    <div class="feature"><b>❄️ শুদ্ধ</b> প্রাকৃতিকভাবে শুকনো, কোনো রোদে শুকিয়ে প্রস্তুত করা হয়।</div>
+    <div class="feature"><b>🏡 ঘরোয়া তৈরি</b>পরিবারের যত্নে ঐতিহ্যবাহী পদ্ধতিতে তৈরি।</div>
+    <div class="feature"><b>🌾 খাঁটি স্বাদ</b>মাসকলাই ও কুমড়ার সুন্দর সমন্বয়ে আসল স্বাদ।</div>
+    <div class="feature"><b>☀️ প্রাকৃতিকভাবে শুকানো</b>রোদে শুকিয়ে প্রস্তুত করা হয়।</div>
   </div>
 </section>
 
@@ -97,24 +109,24 @@
     <h2>অর্ডার করতে যোগাযোগ করুন</h2>
     <p>📞 <strong>01305-601265</strong></p>
     <p>💬 WhatsApp: <strong>01737326621</strong></p>
-    <a class="btn order" href="tel:01305601265">📞 অর্ডার করুন</a>
-    <a class="btn wa" href="https://wa.me/8801737326621">💬 WhatsApp-এ মেসেজ দিন</a>
+    <a class="btn order" href="tel:01305601265">এখনই অর্ডার করুন</a>
+    <a class="btn wa" href="https://wa.me/8801737326621">WhatsApp-এ মেসেজ দিন</a>
   </div>
 </section>
 
 <footer>
-  <p>© ২০২৬ খাঁটি কুমড়া বড়ি - রাণীনগর, নওগাঁ</p>
+  © 2026 খাঁটি কুমড়া বড়ি • রাণীনগর, নওগাঁ
 </footer>
 
+<!-- Swiper JS Script -->
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-
 <script>
   var swiper = new Swiper(".mySwiper", {
-    slidesPerView: 1, // একবারে কয়টি ছবি দেখাবে
-    spaceBetween: 10, // ছবির মাঝখানের ফাঁকা
-    loop: true, // শেষ ছবি থেকে আবার শুরুতে যাবে
+    slidesPerView: 1,
+    spaceBetween: 15,
+    loop: true,
     autoplay: {
-      delay: 3000, // ৩ সেকেন্ড পর পর স্লাইড হবে
+      delay: 3000,
       disableOnInteraction: false,
     },
     pagination: {
@@ -122,23 +134,11 @@
       clickable: true,
     },
     navigation: {
-      el: ".swiper-button-next",
+      nextEl: ".swiper-button-next",
       prevEl: ".swiper-button-prev",
     },
     breakpoints: {
-      // ফোনের জন্য ১টি করে ছবি, কম্পিউটারের জন্য ২টি করে
-      640: {
-        slidesPerView: 1,
-        spaceBetween: 10,
-      },
-      768: {
-        slidesPerView: 2,
-        spaceBetween: 15,
-      },
-      1024: {
-        slidesPerView: 2,
-        spaceBetween: 15,
-      },
+      640: { slidesPerView: 2, spaceBetween: 15 }
     }
   });
 </script>
