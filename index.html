@@ -23,17 +23,19 @@ section h2{text-align:center;color:#7b3f00;margin-bottom:22px;font-size:27px}
 .card{background:white;border-radius:16px;padding:25px;box-shadow:0 4px 18px #00000012}
 .story{text-align:center;font-size:17px}
 
-/* Video & Slider Style */
+/* Video Style - Autoplay */
 .video-container {text-align: center; margin: 25px 0;}
-.video-container video {width: 100%; max-width: 550px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.15);}
+.video-container video {width: 100%; max-width: 650px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.15);}
 
+/* Full Image Swiper Slider Style */
 .swiper {width: 100%; padding-top: 20px; padding-bottom: 45px;}
 .swiper-slide {display: flex; justify-content: center; align-items: center;}
 .swiper-slide img {
   width: 100%;
-  height: 280px;
-  object-fit: cover;
+  max-height: 500px; /* ছবির উচ্চতা বাড়ানো হয়েছে */
+  object-fit: contain; /* ছবি পুরোটা দেখাবে, কোনো অংশ কাটবে না */
   border-radius: 12px;
+  background: #f4f4f4;
   box-shadow: 0 4px 12px rgba(0,0,0,0.12);
 }
 
@@ -46,7 +48,7 @@ footer{text-align:center;background:#3d2b1f;color:#fff;padding:20px}
 
 @media(max-width:650px){
   header h1{font-size:25px}.hero h2{font-size:27px}.features{grid-template-columns:1fr}
-  .swiper-slide img {height: 200px;}
+  .swiper-slide img {max-height: 350px;} /* মোবাইল স্ক্রিনের জন্য বড় সাইজ */
 }
 </style>
 </head>
@@ -69,15 +71,15 @@ footer{text-align:center;background:#3d2b1f;color:#fff;padding:20px}
   <div class="card story">
     <p>প্রথমে ভালো মানের মাসকলাই ভাঙানো হয়। এরপর রাতভর ভিজিয়ে রেখে ভোররাতে পরিবারের সবাই মিলে পাটায় বেটে বড়ির মিশ্রণ তৈরি করা হয়। মা-কাকিদের যত্নের হাতে চাটাইয়ে বড়ি দেওয়া হয় এবং দু’দিন রোদে শুকিয়ে তৈরি হয় আমাদের খাঁটি কুমড়া বড়ি।</p>
 
-    <!-- ভিডিও সেকশন -->
+    <!-- অটো-প্লে ভিডিও সেকশন -->
     <div class="video-container">
-      <video controls poster="1797933102661.png">
+      <video autoplay muted loop playsinline controls poster="1797933102661.png">
         <source src="InShot_20260829_002652318.mp4" type="video/mp4">
         আপনার ব্রাউজারে ভিডিও চলবে না।
       </video>
     </div>
 
-    <!-- ছবি স্লাইডার -->
+    <!-- বড় সাইজের ছবি স্লাইডার -->
     <div class="swiper mySwiper">
       <div class="swiper-wrapper">
         <div class="swiper-slide"><img src="1787845338733.png" alt="কুমড়া বড়ি"></div>
@@ -123,10 +125,10 @@ footer{text-align:center;background:#3d2b1f;color:#fff;padding:20px}
 <script>
   var swiper = new Swiper(".mySwiper", {
     slidesPerView: 1,
-    spaceBetween: 15,
+    spaceBetween: 20,
     loop: true,
     autoplay: {
-      delay: 3000,
+      delay: 3500,
       disableOnInteraction: false,
     },
     pagination: {
@@ -136,9 +138,6 @@ footer{text-align:center;background:#3d2b1f;color:#fff;padding:20px}
     navigation: {
       nextEl: ".swiper-button-next",
       prevEl: ".swiper-button-prev",
-    },
-    breakpoints: {
-      640: { slidesPerView: 2, spaceBetween: 15 }
     }
   });
 </script>
