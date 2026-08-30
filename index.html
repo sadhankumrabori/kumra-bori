@@ -13,27 +13,26 @@
 body{font-family:Arial,"Noto Sans Bengali",sans-serif;background:#fffaf0;color:#3d2b1f;line-height:1.7}
 header{background:linear-gradient(135deg,#7b3f00,#b86b16);color:white;text-align:center;padding:18px 15px}
 header h1{font-size:30px;margin-bottom:4px} header p{font-size:16px}
-.hero{padding:55px 20px;text-align:center;background:#fff0cf}
-.hero h2{font-size:34px;color:#713700;margin-bottom:12px}
+.hero{padding:45px 20px;text-align:center;background:#fff0cf}
+.hero h2{font-size:32px;color:#713700;margin-bottom:12px}
 .hero p{max-width:700px;margin:auto;font-size:18px}
-.btn{display:inline-block;margin:20px 7px 0;padding:12px 22px;border-radius:30px;text-decoration:none;font-weight:bold}
-.order{background:#198754;color:#fff}.wa{background:#25d366;color:#fff}
-section{max-width:950px;margin:auto;padding:42px 20px}
+.btn{display:inline-block;margin:15px 7px 0;padding:12px 22px;border-radius:30px;text-decoration:none;font-weight:bold;cursor:pointer;border:none;}
+.order-btn-top{background:#198754;color:#fff}.wa{background:#25d366;color:#fff}
+section{max-width:950px;margin:auto;padding:35px 20px}
 section h2{text-align:center;color:#7b3f00;margin-bottom:22px;font-size:27px}
 .card{background:white;border-radius:16px;padding:25px;box-shadow:0 4px 18px #00000012}
 .story{text-align:center;font-size:17px}
 
-/* Video Style - Autoplay */
+/* Video & Slider Style */
 .video-container {text-align: center; margin: 25px 0;}
 .video-container video {width: 100%; max-width: 650px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.15);}
 
-/* Full Image Swiper Slider Style */
 .swiper {width: 100%; padding-top: 20px; padding-bottom: 45px;}
 .swiper-slide {display: flex; justify-content: center; align-items: center;}
 .swiper-slide img {
   width: 100%;
-  max-height: 500px; /* ছবির উচ্চতা বাড়ানো হয়েছে */
-  object-fit: contain; /* ছবি পুরোটা দেখাবে, কোনো অংশ কাটবে না */
+  max-height: 500px;
+  object-fit: contain;
   border-radius: 12px;
   background: #f4f4f4;
   box-shadow: 0 4px 12px rgba(0,0,0,0.12);
@@ -42,13 +41,103 @@ section h2{text-align:center;color:#7b3f00;margin-bottom:22px;font-size:27px}
 .features{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
 .feature{text-align:center;padding:22px;background:#fff;border-radius:14px;box-shadow:0 3px 14px #00000010}
 .feature b{display:block;font-size:20px;color:#7b3f00;margin-bottom:6px}
-.contact{text-align:center;background:#7b3f00;color:white;border-radius:18px}
-.contact h2{color:#fff}
+
+/* --- ORDER FORM STYLES --- */
+.checkout-section {max-width: 650px; margin: 0 auto;}
+.product-option {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 2px solid #e0e0e0;
+  border-radius: 12px;
+  padding: 15px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.3s ease;
+}
+.product-option.selected {border-color: #e65100; background-color: #fff9f5;}
+.product-option input[type="radio"] {margin-right: 12px; transform: scale(1.3); accent-color: #e65100;}
+.product-info-left {display: flex; align-items: center; gap: 12px;}
+.product-img {width: 50px; height: 50px; border-radius: 8px; object-fit: cover;}
+.badge {
+  position: absolute;
+  top: -10px;
+  right: 15px;
+  background: #e65100;
+  color: white;
+  font-size: 12px;
+  padding: 2px 10px;
+  border-radius: 20px;
+  font-weight: bold;
+}
+
+.form-group {margin-bottom: 18px;}
+.form-group label {display: block; font-weight: bold; margin-bottom: 6px; color: #333;}
+.form-group label span {color: red;}
+.form-group input, .form-group textarea {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 15px;
+  outline: none;
+}
+.form-group input:focus, .form-group textarea:focus {border-color: #e65100;}
+
+.shipping-box {
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 12px 15px;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+.shipping-box input {margin-right: 10px; accent-color: #e65100;}
+
+.order-summary {
+  border-top: 1px dashed #ccc;
+  margin-top: 20px;
+  padding-top: 15px;
+}
+.summary-row {display: flex; justify-content: space-between; margin-bottom: 8px; font-size: 15px;}
+.summary-row.total {font-weight: bold; font-size: 18px; color: #000; border-top: 1px solid #eee; padding-top: 8px;}
+
+.cod-box {
+  background: #f8f9fa;
+  border-radius: 8px;
+  padding: 15px;
+  margin-top: 15px;
+}
+.cod-alert {
+  background: #e9ecef;
+  padding: 10px;
+  border-radius: 6px;
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+.submit-btn {
+  width: 100%;
+  background: #f25c22;
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 15px;
+  border: none;
+  border-radius: 10px;
+  margin-top: 20px;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(242, 92, 34, 0.3);
+}
+
 footer{text-align:center;background:#3d2b1f;color:#fff;padding:20px}
 
 @media(max-width:650px){
   header h1{font-size:25px}.hero h2{font-size:27px}.features{grid-template-columns:1fr}
-  .swiper-slide img {max-height: 350px;} /* মোবাইল স্ক্রিনের জন্য বড় সাইজ */
+  .swiper-slide img {max-height: 350px;}
 }
 </style>
 </head>
@@ -62,7 +151,7 @@ footer{text-align:center;background:#3d2b1f;color:#fff;padding:20px}
 <div class="hero">
   <h2>মা-বোনদের কোমল হাতের ছোঁয়ায় ❤️</h2>
   <p>ঘরোয়া পদ্ধতিতে যত্ন ও ভালোবাসায় তৈরি আমাদের খাঁটি কুমড়া বড়ি। স্বাদে ঐতিহ্য, তৈরিতে মায়ের হাতের ভালোবাসা।</p>
-  <a class="btn order" href="tel:01305601265">📞 অর্ডার করুন</a>
+  <a class="btn order-btn-top" href="#order-form-section">📞 অর্ডার করুন</a>
   <a class="btn wa" href="https://wa.me/8801737326621">💬 WhatsApp</a>
 </div>
 
@@ -71,7 +160,7 @@ footer{text-align:center;background:#3d2b1f;color:#fff;padding:20px}
   <div class="card story">
     <p>প্রথমে ভালো মানের মাসকলাই ভাঙানো হয়। এরপর রাতভর ভিজিয়ে রেখে ভোররাতে পরিবারের সবাই মিলে পাটায় বেটে বড়ির মিশ্রণ তৈরি করা হয়। মা-কাকিদের যত্নের হাতে চাটাইয়ে বড়ি দেওয়া হয় এবং দু’দিন রোদে শুকিয়ে তৈরি হয় আমাদের খাঁটি কুমড়া বড়ি।</p>
 
-    <!-- অটো-প্লে ভিডিও সেকশন -->
+    <!-- ভিডিও -->
     <div class="video-container">
       <video autoplay muted loop playsinline controls poster="1797933102661.png">
         <source src="InShot_20260829_002652318.mp4" type="video/mp4">
@@ -79,7 +168,7 @@ footer{text-align:center;background:#3d2b1f;color:#fff;padding:20px}
       </video>
     </div>
 
-    <!-- বড় সাইজের ছবি স্লাইডার -->
+    <!-- ছবি স্লাইডার -->
     <div class="swiper mySwiper">
       <div class="swiper-wrapper">
         <div class="swiper-slide"><img src="1787845338733.png" alt="কুমড়া বড়ি"></div>
@@ -115,14 +204,116 @@ footer{text-align:center;background:#3d2b1f;color:#fff;padding:20px}
   </div>
 </section>
 
+<!-- --- চেকআউট ও অর্ডার ফর্ম সেকশন --- -->
+<section id="order-form-section">
+  <div class="card checkout-section">
+    <h2 style="text-align:left; color:#333; margin-bottom:15px;">অর্ডার নিশ্চিত করতে প্রোডাক্ট ও তথ্য দিন</h2>
+    
+    <!-- প্রোডাক্ট নির্বাচন -->
+    <div class="product-option selected" onclick="selectProduct(this, 490, '500 গ্রাম')">
+      <div class="product-info-left">
+        <input type="radio" name="product" checked>
+        <img src="1797933102661.png" class="product-img" alt="Kumro Bori">
+        <div>
+          <strong>Kumro Bori (কুমড়ো বড়ি)</strong><br>
+          <small style="color:#666;">500 গ্রাম</small>
+        </div>
+      </div>
+      <div><strong>৳ 490.00</strong></div>
+    </div>
 
-<section>
-  <div class="contact card">
-    <h2>অর্ডার করতে যোগাযোগ করুন</h2>
-    <p>📞 <strong>01305-601265</strong></p>
-    <p>💬 WhatsApp: <strong>01737326621</strong></p>
-    <a class="btn order" href="tel:01305601265">এখনই অর্ডার করুন</a>
-    <a class="btn wa" href="https://wa.me/8801737326621">WhatsApp-এ মেসেজ দিন</a>
+    <div class="product-option" onclick="selectProduct(this, 750, '1 কেজি')">
+      <span class="badge">বেশি বিক্রিয়</span>
+      <div class="product-info-left">
+        <input type="radio" name="product">
+        <img src="1797933102661.png" class="product-img" alt="Kumro Bori">
+        <div>
+          <strong>Kumro Bori (কুমড়ো বড়ি)</strong><br>
+          <small style="color:#666;">1 কেজি</small>
+        </div>
+      </div>
+      <div><strong>৳ 750.00</strong></div>
+    </div>
+
+    <div class="product-option" onclick="selectProduct(this, 1350, '2 কেজি')">
+      <span class="badge" style="background:#2e7d32;">ডেলিভারি চার্জ ফ্রি!</span>
+      <div class="product-info-left">
+        <input type="radio" name="product">
+        <img src="1797933102661.png" class="product-img" alt="Kumro Bori">
+        <div>
+          <strong>Kumro Bori (কুমড়ো বড়ি)</strong><br>
+          <small style="color:#666;">2 কেজি</small>
+        </div>
+      </div>
+      <div><strong>৳ 1,350.00</strong></div>
+    </div>
+
+    <!-- ক্রেতার তথ্য -->
+    <h3 style="margin: 25px 0 15px 0; font-size:18px;">এখানে আপনার তথ্য দিন...</h3>
+    <form id="checkoutForm" onsubmit="sendOrder(event)">
+      <div class="form-group">
+        <label>আপনার নাম <span>*</span></label>
+        <input type="text" id="custName" placeholder="পূর্ণ নাম লিখুন" required>
+      </div>
+
+      <div class="form-group">
+        <label>সম্পূর্ণ ঠিকানা লিখুন:- <span>*</span></label>
+        <textarea id="custAddress" rows="2" placeholder="বাড়ি/গ্রাম, এলাকা, থানা, জেলা..." required></textarea>
+      </div>
+
+      <div class="form-group">
+        <label>ফোন নাম্বার <span>*</span></label>
+        <input type="tel" id="custPhone" placeholder="016***********" required>
+      </div>
+
+      <!-- শিপিং সিলেক্ট -->
+      <h3 style="margin: 20px 0 10px 0; font-size:18px;">Shipping</h3>
+      <div class="shipping-box" onclick="selectShipping(70)">
+        <label style="margin:0; cursor:pointer;"><input type="radio" name="shipping" value="70" checked> ঢাকার ভিতরে:</label>
+        <span>৳ 70.00</span>
+      </div>
+      <div class="shipping-box" onclick="selectShipping(110)">
+        <label style="margin:0; cursor:pointer;"><input type="radio" name="shipping" value="110"> ঢাকার বাহিরের জেলাসমূহ:</label>
+        <span>৳ 110.00</span>
+      </div>
+
+      <!-- অর্ডার সামারি -->
+      <h3 style="margin: 25px 0 15px 0; font-size:18px;">আপনি যা অর্ডার করতে যাচ্ছেন</h3>
+      <div class="order-summary">
+        <div class="summary-row">
+          <span><strong>Product</strong></span>
+          <span><strong>Subtotal</strong></span>
+        </div>
+        <div class="summary-row" style="color:#666;">
+          <span id="summaryProdName">Kumro Bori - 500 গ্রাম × 1</span>
+          <span id="summaryProdPrice">৳ 490.00</span>
+        </div>
+        <div class="summary-row">
+          <span>Subtotal</span>
+          <span id="summarySubtotal">৳ 490.00</span>
+        </div>
+        <div class="summary-row">
+          <span>Delivery Charge</span>
+          <span id="summaryDelivery">৳ 70.00</span>
+        </div>
+        <div class="summary-row total">
+          <span>Total</span>
+          <span id="summaryTotal">৳ 560.00</span>
+        </div>
+      </div>
+
+      <!-- ক্যাশ অন ডেলিভারি বার্তা -->
+      <div class="cod-box">
+        <strong>ক্যাশ অন ডেলিভারী</strong>
+        <div class="cod-alert">
+          ডেলিভারী ম্যানের হাতে টাকা পরিশোধ করবেন।
+        </div>
+      </div>
+
+      <p style="font-size:12px; color:#666; margin-top:15px;">"আপনার ব্যক্তিগত তথ্য শুধুমাত্র অর্ডার সম্পন্ন ও উন্নত সেবা প্রদানের জন্য ব্যবহার করা হবে।" <a href="#" style="color:#e65100;">privacy policy</a>.</p>
+
+      <button type="submit" class="submit-btn" id="confirmBtn">🔒 অর্ডার কনফার্ম ৳ 560.00</button>
+    </form>
   </div>
 </section>
 
@@ -150,6 +341,75 @@ footer{text-align:center;background:#3d2b1f;color:#fff;padding:20px}
       prevEl: ".swiper-button-prev",
     }
   });
+
+  // Dynamic calculations & WhatsApp Script
+  let selectedPrice = 490;
+  let selectedWeight = '500 গ্রাম';
+  let deliveryCharge = 70;
+
+  function selectProduct(element, price, weight) {
+    document.querySelectorAll('.product-option').forEach(el => el.classList.remove('selected'));
+    document.querySelectorAll('.product-option input[type="radio"]').forEach(el => el.checked = false);
+    
+    element.classList.add('selected');
+    element.querySelector('input[type="radio"]').checked = true;
+    
+    selectedPrice = price;
+    selectedWeight = weight;
+    
+    if(weight === '2 কেজি') {
+      deliveryCharge = 0;
+      document.querySelectorAll('.shipping-box input').forEach(el => el.checked = false);
+    } else {
+      let currentShip = document.querySelector('input[name="shipping"]:checked');
+      deliveryCharge = currentShip ? parseInt(currentShip.value) : 70;
+    }
+    
+    updateCalculation();
+  }
+
+  function selectShipping(cost) {
+    if(selectedWeight === '2 কেজি') {
+      deliveryCharge = 0;
+    } else {
+      deliveryCharge = cost;
+    }
+    updateCalculation();
+  }
+
+  function updateCalculation() {
+    let total = selectedPrice + deliveryCharge;
+    
+    document.getElementById('summaryProdName').innerText = `Kumro Bori - ${selectedWeight} × 1`;
+    document.getElementById('summaryProdPrice').innerText = `৳ ${selectedPrice}.00`;
+    document.getElementById('summarySubtotal').innerText = `৳ ${selectedPrice}.00`;
+    document.getElementById('summaryDelivery').innerText = `৳ ${deliveryCharge}.00`;
+    document.getElementById('summaryTotal').innerText = `৳ ${total}.00`;
+    
+    document.getElementById('confirmBtn').innerText = `🔒 অর্ডার কনফার্ম ৳ ${total}.00`;
+  }
+
+  function sendOrder(e) {
+    e.preventDefault();
+    
+    let name = document.getElementById('custName').value;
+    let address = document.getElementById('custAddress').value;
+    let phone = document.getElementById('custPhone').value;
+    let total = selectedPrice + deliveryCharge;
+    
+    let message = `*নতুন অর্ডার এসেছে!*%0A%0A` +
+                  `*প্রোডাক্ট:* কুমড়া বড়ি (${selectedWeight})%0A` +
+                  `*দাম:* ৳${selectedPrice}%0A` +
+                  `*ডেলিভারি চার্জ:* ৳${deliveryCharge}%0A` +
+                  `*সর্বমোট:* ৳${total}%0A%0A` +
+                  `*কাস্টমারের তথ্য:*%0A` +
+                  `*নাম:* ${name}%0A` +
+                  `*ঠিকানা:* ${address}%0A` +
+                  `*ফোন:* ${phone}`;
+
+    let whatsappURL = `https://wa.me/8801737326621?text=${message}`;
+    window.open(whatsappURL, '_blank');
+  }
 </script>
 
 </body>
