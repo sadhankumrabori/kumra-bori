@@ -1,481 +1,549 @@
 <!DOCTYPE html>
 <html lang="bn">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>খাঁটি কুমড়া বড়ি | রাণীনগর, নওগাঁ</title>
-  <meta property="og:type" content="website">
-<meta property="og:url" content="http://www.sadhankathikumrabori.com">
-<meta property="og:title" content="খাঁটি কুমড়া বড়ি | Barirbazar Naogaon">
-<meta property="og:description" content="রানীনগরের খাঁটি মাষকলাই ও চালকুমড়ার তৈরি সুস্বাদু কুমড়া বড়ি। অর্ডারের জন্য ভিজিট করুন: www.sadhankathikumrabori.com">
-<meta property="og:image" content="https://sadhankumrabori.github.io/kumra-bori/1788078116190.png">
-<meta property="og:image:secure_url" content="https://sadhankumrabori.github.io/kumra-bori/1788078116190.png">
-<meta property="og:image:type" content="image/png">
-<meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="630">
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="খাঁটি কুমড়া বড়ি | Barirbazar Naogaon">
-<meta name="twitter:description" content="রানীনগরের খাঁটি মাষকলাই ও চালকুমড়ার তৈরি কুমড়া বড়ি।">
-<meta name="twitter:image" content="https://sadhankumrabori.github.io/kumra-bori/1788078116190.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>খাটি কুমড়া বড়ি | বাড়িড়বাজার, নওগাঁ</title>
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="http://www.sadhankathikumrabori.com">
+    <meta property="og:title" content="খাটি কুমড়া বড়ি | Barirbazar Naogaon">
+    <meta property="og:description" content="সামিনাতোর খাঁটি মাসকলাই ও চালকুমড়ার তৈরি সুস্বাদু কুমড়া বড়ি। অর্ডারের জন্য ভিজিট করুন: www.sadhankathikumrabori.com">
+    <meta property="og:image" content="https://sadhankumrabori.github.io/kumra-bori/1788078116190.png">
+    <meta property="og:image:secure_url" content="https://sadhankumrabori.github.io/kumra-bori/1788078116190.png">
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="খাটি কুমড়া বড়ি | Barirbazar Naogaon">
+    <meta name="twitter:description" content="সামিনাতোর খাঁটি মাসকলাই ও চালকুমড়ার তৈরি সুস্বাদু কুমড়া বড়ি।">
+    <meta name="twitter:image" content="https://sadhankumrabori.github.io/kumra-bori/1788078116190.png">
 
+    <!-- Google Font & Swiper CSS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
 
-<!-- Google Font (Hind Siliguri) & Swiper CSS -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: 'Hind Siliguri', sans-serif;
+            background: #fffaf0;
+            color: #3d2b1f;
+            line-height: 1.7;
+        }
 
-<style>
-.top-banner-slider {
-    width: 100%;
-    overflow: hidden;
-    position: relative;
-    background-color: #fff;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-}
+        /* Top Sliding Banner */
+        .top-banner-slider {
+            width: 100%;
+            overflow: hidden;
+            position: relative;
+            background-color: #fff;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+        .top-banner-track {
+            display: flex;
+            width: 1200%;
+            animation: continuousSlide 24s linear infinite;
+        }
+        .top-banner-track:hover {
+            animation-play-state: paused;
+        }
+        .top-banner-track img {
+            width: 8.333%;
+            height: auto;
+            display: block;
+            object-fit: cover;
+        }
+        @keyframes continuousSlide {
+            0% { transform: translateX(0%); }
+            100% { transform: translateX(-50%); }
+        }
 
-.top-banner-track {
-    display: flex;
-    /* ৬টি মূল + ৬টি ডুপ্লিকেট = ১২টি ছবির জন্য ১২০০% */
-    width: 1200%;
-    animation: continuousSlide 24s linear infinite;
-}
+        /* Header & Hero */
+        header {
+            background: linear-gradient(135deg, #7b3f00, #b86b16);
+            color: white;
+            text-align: center;
+            padding: 18px 15px;
+        }
+        header h1 { font-size: 32px; font-weight: 700; margin-bottom: 4px; }
+        header p { font-size: 17px; font-weight: 500; }
 
-.top-banner-track:hover {
-    animation-play-state: paused;
-}
+        .hero {
+            padding: 30px 20px;
+            text-align: center;
+            background: #fff0cf;
+        }
+        .hero h2 { font-size: 32px; font-weight: 700; color: #7b3f00; margin-bottom: 12px; }
+        .hero p { max-width: 700px; margin: auto; font-size: 19px; font-weight: 500; }
+        .hero-img {
+            width: 100%;
+            max-width: 320px;
+            border-radius: 16px;
+            margin: 15px auto;
+            display: block;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+        }
 
-.top-banner-track img {
-    /* প্রতিটি ছবি সমান (১০০% / ১২ = ৮.৩৩%) জায়গা নেবে */
-    width: 8.333%;
-    height: auto;
-    display: block;
-    object-fit: cover;
-}
+        /* Buttons */
+        .btn {
+            display: inline-block;
+            margin: 10px 7px;
+            padding: 14px 28px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        .btn:hover { transform: translateY(-3px); }
+        .order-btn-top { background: #f25c22; color: #fff; font-size: 19px; }
+        .wa { background: #25d366; color: #fff; font-size: 19px; }
 
-@keyframes continuousSlide {
-    0% {
-        transform: translateX(0%);
-    }
-    100% {
-        transform: translateX(-50%);
-    }
-}
+        /* Sections & Cards */
+        section {
+            max-width: 1000px;
+            margin: auto;
+            padding: 35px 20px;
+        }
+        section h2 {
+            text-align: center;
+            color: #7b3f00;
+            margin-bottom: 22px;
+            font-size: 28px;
+            font-weight: 700;
+        }
+        .card {
+            background: white;
+            border-radius: 16px;
+            padding: 25px;
+            box-shadow: 0 4px 18px #00000012;
+            transition: transform 0.3s ease;
+        }
+        .story { text-align: center; font-size: 18px; font-weight: 500; }
 
-}
+        /* Media Grid */
+        .media-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            align-items: center;
+            margin-top: 25px;
+        }
+        .video-container { width: 100%; }
+        .video-container video {
+            width: 100%;
+            height: 350px;
+            object-fit: cover;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+        }
+        .swiper { width: 100%; height: 350px; border-radius: 12px; }
+        .swiper-slide {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #f4f4f4;
+            border-radius: 12px;
+        }
+        .swiper-slide img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 12px;
+        }
 
+        /* Features */
+        .features {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 18px;
+        }
+        .feature {
+            text-align: center;
+            padding: 22px;
+            background: #fff;
+            border-radius: 14px;
+            box-shadow: 0 3px 14px #00000010;
+            font-size: 16px;
+        }
+        .feature b { display: block; font-size: 20px; color: #7b3f00; margin-bottom: 6px; font-weight: 700; }
 
+        /* Checkout Section & Form */
+        .checkout-section {
+            max-width: 600px;
+            margin: 0 auto;
+            background: #fff;
+            border-radius: 16px;
+            padding: 20px;
+        }
+        .alert-red { background-color: #ff3b30; color: white; text-align: center; padding: 12px; font-size: 19px; font-weight: 700; border-radius: 8px; margin-bottom: 10px; }
+        .alert-grey { background-color: #b0b5b9; color: #1a1a1a; text-align: center; padding: 12px; font-size: 19px; font-weight: 700; border-radius: 8px; margin-bottom: 15px; }
 
-*{box-sizing:border-box;margin:0;padding:0}
-body{font-family: 'Hind Siliguri', sans-serif;background:#fffaf0;color:#3d2b1f;line-height:1.7}
-header{background:linear-gradient(135deg,#7b3f00,#b86b16);color:white;text-align:center;padding:18px 15px}
-header h1{font-size:32px;font-weight:700;margin-bottom:4px} header p{font-size:17px;font-weight:500}
+        .product-card {
+            border: 1px solid #dcdcdc;
+            border-radius: 8px;
+            padding: 16px;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            position: relative;
+            cursor: pointer;
+            background: #fff;
+            transition: border-color 0.2s;
+        }
+        .product-card.selected { border: 2px solid #e65100; }
+        .product-card input[type="radio"] { margin-right: 15px; transform: scale(1.4); accent-color: #e65100; }
+        .product-card img { width: 70px; height: 70px; border-radius: 6px; object-fit: cover; margin-right: 15px; }
+        .product-details { flex-grow: 1; }
+        .product-title { font-size: 18px; font-weight: 700; color: #222; margin-bottom: 2px; }
+        .product-qty { color: #555; font-size: 16px; margin-bottom: 2px; }
+        .product-price { font-size: 18px; font-weight: 700; color: #222; }
 
-.hero{padding:30px 20px;text-align:center;background:#fff0cf}
-.hero h2{font-size:32px;font-weight:700;color:#713700;margin-bottom:12px}
-.hero p{max-width:700px;margin:auto;font-size:19px;font-weight:500}
-.hero-img {width: 100%; max-width: 320px; border-radius: 16px; margin: 15px auto; display: block; box-shadow: 0 4px 15px rgba(0,0,0,0.15);}
+        .form-group { margin-bottom: 18px; }
+        .form-group label { display: block; font-weight: 700; margin-bottom: 6px; color: #333; font-size: 16px; }
+        .form-group label span { color: red; }
+        .form-group input, .form-group textarea, .form-group select {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            font-size: 16px;
+            font-family: 'Hind Siliguri', sans-serif;
+            outline: none;
+            background: #fff;
+        }
 
-.btn{display:inline-block;margin:10px 7px;padding:14px 28px;border-radius:30px;text-decoration:none;font-weight:700;cursor:pointer;border:none;}
-.order-btn-top{background:#f25c22;color:#fff;font-size:19px;}
-.wa{background:#25d366;color:#fff;font-size:19px;}
+        .shipping-option {
+            border: 1px solid #dcdcdc;
+            border-radius: 6px;
+            padding: 12px 15px;
+            margin-bottom: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: 600;
+        }
 
-section{max-width:1000px;margin:auto;padding:35px 20px}
-section h2{text-align:center;color:#7b3f00;margin-bottom:22px;font-size:28px;font-weight:700}
-.card{background:white;border-radius:16px;padding:25px;box-shadow:0 4px 18px #00000012}
-.story{text-align:center;font-size:18px;font-weight:500}
+        .order-summary { margin-top: 25px; border-top: 1px solid #eee; padding-top: 15px; }
+        .summary-header { display: flex; justify-content: space-between; font-weight: 700; font-size: 17px; border-bottom: 1px dashed #ddd; padding-bottom: 8px; }
+        .summary-item { display: flex; align-items: center; justify-content: space-between; margin-bottom: 15px; font-size: 16px; margin-top: 10px; }
+        .summary-item-left { display: flex; align-items: center; gap: 12px; }
+        .summary-item img { width: 50px; height: 50px; border-radius: 6px; object-fit: cover; }
+        .summary-row { display: flex; justify-content: space-between; margin-bottom: 10px; font-size: 17px; }
+        .summary-row.total { font-weight: 700; font-size: 20px; color: #000; border-top: 1px solid #eee; padding-top: 10px; }
 
-.media-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 20px;
-  align-items: center;
-  margin-top: 25px;
-}
-.video-container {width: 100%;}
-.video-container video {width: 100%; height: 350px; object-fit: cover; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.15);}
+        .place-order-btn {
+            width: 100%;
+            background: #f25c22;
+            color: white;
+            font-size: 21px;
+            font-weight: 700;
+            font-family: 'Hind Siliguri', sans-serif;
+            padding: 15px;
+            border: none;
+            border-radius: 30px;
+            margin-top: 20px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            transition: background 0.3s;
+        }
+        .place-order-btn:hover { background: #d94b15; }
 
-.swiper {width: 100%; height: 350px; border-radius: 12px;}
-.swiper-slide {display: flex; justify-content: center; align-items: center; background: #f4f4f4; border-radius: 12px;}
-.swiper-slide img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: 12px;
-}
+        footer { text-align: center; background: #3d2b1f; color: #fff; padding: 20px; font-size: 16px; }
 
-.features{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
-.feature{text-align:center;padding:22px;background:#fff;border-radius:14px;box-shadow:0 3px 14px #00000010;font-size:16px}
-.feature b{display:block;font-size:20px;color:#7b3f00;margin-bottom:6px;font-weight:700}
-
-.checkout-section {max-width: 600px; margin: 0 auto; background: #fff; border-radius: 12px; padding: 20px;}
-.alert-red {background-color: #ff3b30; color: white; text-align: center; padding: 12px; font-size: 19px; font-weight: 700; border-radius: 8px; margin-bottom: 15px;}
-.alert-grey {background-color: #b0b5b9; color: #1a1a1a; text-align: center; padding: 12px; font-size: 19px; font-weight: 700; border-radius: 8px; margin-bottom: 25px;}
-
-.product-card {
-  border: 1px solid #dcdcdc;
-  border-radius: 8px;
-  padding: 16px;
-  margin-bottom: 15px;
-  display: flex;
-  align-items: center;
-  position: relative;
-  cursor: pointer;
-  background: #fff;
-}
-.product-card.selected {border: 2px solid #e65100;}
-.product-card input[type="radio"] {margin-right: 15px; transform: scale(1.4); accent-color: #e65100;}
-.product-card img {width: 70px; height: 70px; border-radius: 6px; object-fit: cover; margin-right: 15px;}
-.product-details {flex-grow: 1;}
-.product-title {font-size: 18px; font-weight: 700; color: #222; margin-bottom: 2px;}
-.product-qty {color: #555; font-size: 16px; margin-bottom: 2px;}
-.product-price {font-size: 18px; font-weight: 700; color: #222;}
-
-.form-group {margin-bottom: 18px;}
-.form-group label {display: block; font-weight: 700; margin-bottom: 6px; color: #333; font-size: 16px;}
-.form-group label span {color: red;}
-.form-group input, .form-group textarea, .form-group select {
-  width: 100%;
-  padding: 12px 15px;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-  font-size: 16px;
-  font-family: 'Hind Siliguri', sans-serif;
-  outline: none;
-  background: #fff;
-}
-
-.shipping-option {
-  border: 1px solid #dcdcdc;
-  border-radius: 6px;
-  padding: 12px 15px;
-  margin-bottom: 10px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  cursor: pointer;
-  font-size: 16px;
-  font-weight: 600;
-}
-.shipping-option input {margin-right: 10px; transform: scale(1.2); accent-color: #f25c22;}
-
-.order-summary {margin-top: 25px; border-top: 1px solid #eee; padding-top: 15px;}
-.summary-header {display: flex; justify-content: space-between; font-weight: 700; font-size: 17px; border-bottom: 1px dashed #ddd; padding-bottom: 10px; margin-bottom: 15px;}
-.summary-item {display: flex; align-items: center; justify-content: space-between; margin-bottom: 15px; font-size: 16px;}
-.summary-item-left {display: flex; align-items: center; gap: 12px;}
-.summary-item img {width: 50px; height: 50px; border-radius: 6px; object-fit: cover;}
-.summary-row {display: flex; justify-content: space-between; margin-bottom: 10px; font-size: 17px;}
-.summary-row.total {font-weight: 700; font-size: 20px; color: #000; border-top: 1px solid #eee; padding-top: 10px;}
-
-.place-order-btn {
-  width: 100%;
-  background: #f25c22;
-  color: white;
-  font-size: 21px;
-  font-weight: 700;
-  font-family: 'Hind Siliguri', sans-serif;
-  padding: 15px;
-  border: none;
-  border-radius: 30px;
-  margin-top: 20px;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-}
-
-footer{text-align:center;background:#3d2b1f;color:#fff;padding:20px;font-size:16px}
-
-@media(max-width:768px){
-  header h1{font-size:26px}.hero h2{font-size:26px}.features{grid-template-columns:1fr}
-  .media-grid {grid-template-columns: 1fr;}
-  .video-container video, .swiper {height: 300px;}
-}
-</style>
+        /* Responsive Design Rules */
+        @media (max-width: 768px) {
+            header h1 { font-size: 24px; }
+            .hero h2 { font-size: 24px; }
+            .hero p { font-size: 16px; }
+            .media-grid { grid-template-columns: 1fr; }
+            .features { grid-template-columns: 1fr; }
+            .video-container video, .swiper { height: 250px; }
+        }
+    </style>
 </head>
 <body>
 
-<header>
-  <!-- Top Sliding Banner -->
-<!-- Top Continuous Sliding Banner -->
-<div class="top-banner-slider">
-    <div class="top-banner-track">
-        <img src="1788114278805.png" alt="Barirbazar Naogaon Banner">
-<img src="1788114290299.png" alt="Barirbazar Naogaon Banner">
-<img src="1788114297583.png" alt="Barirbazar Naogaon Banner">
-<img src="1788114309105.png" alt="Barirbazar Naogaon Banner">
-<img src="1788114671232.png" alt="Barirbazar Naogaon Banner">
-<img src="1788114729948.png" alt="Barirbazar Naogaon Banner">
-<img src="1788114278805.png" alt="Barirbazar Naogaon Banner">
-<img src="1788114290299.png" alt="Barirbazar Naogaon Banner">
-<img src="1788114297583.png" alt="Barirbazar Naogaon Banner">
-<img src="1788114309105.png" alt="Barirbazar Naogaon Banner">
-<img src="1788114671232.png" alt="Barirbazar Naogaon Banner">
-<img src="1788114729948.png" alt="Barirbazar Naogaon Banner">
-
-    </div>
-</div>
-
-  <h1>🌿 খাঁটি কুমড়া বড়ি</h1>
-  <p>নওগাঁর রাণীনগর • খট্টেশ্বরের ঐতিহ্যবাহী স্বাদ</p>
-</header>
-
-<div class="hero">
-  <h2>মা-বোনদের কোমল হাতের ছোঁয়ায় ❤️</h2>
-  <p>ঘরোয়া পদ্ধতিতে যত্ন ও ভালোবাসায় তৈরি আমাদের খাঁটি কুমড়া বড়ি। স্বাদে ঐতিহ্য, তৈরিতে মায়ের হাতের ভালোবাসা।</p>
-  
-  <img src="bori.png" alt="খাঁটি কুমড়া বড়ি" class="hero-img">
-  
-  <div>
-    <a class="btn order-btn-top" href="#order-form-section">🛒 অর্ডার করতে চাই</a> <br>
-    <a class="btn wa" href="https://wa.me/8801737326621">💬 +8801737326621</a>
-  </div>
-</div>
-
-<section>
-  <h2>আমাদের ঐতিহ্য ও তৈরি প্রক্রিয়া</h2>
-  <div class="card story">
-    <p>প্রথমে ভালো মানের মাসকলাই ভাঙানো হয়। এরপর রাতভর ভিজিয়ে রেখে ভোররাতে পরিবারের সবাই মিলে পাটায় বেটে বড়ির মিশ্রণ তৈরি করা হয়। মা-কাকিদের যত্নের হাতে চাটাইয়ে বড়ি দেওয়া হয় এবং দু’দিন রোদে শুকিয়ে তৈরি হয় আমাদের খাঁটি কুমড়া বড়ি।</p>
-
-    <div class="media-grid">
-      <div class="video-container">
-        <video autoplay muted loop playsinline controls poster="bori.png">
-          <source src="InShot_20260829_002652318.mp4" type="video/mp4">
-          আপনার ব্রাউজারে ভিডিও চলবে না।
-        </video>
-      </div>
-
-      <div class="swiper mySwiper">
-        <div class="swiper-wrapper">
-          <div class="swiper-slide"><img src="bori.png" alt="কুমড়া বড়ি"></div>
-          <div class="swiper-slide"><img src="1787845338733.png" alt="কুমড়া বড়ি"></div>
-          <div class="swiper-slide"><img src="1787846665694.png" alt="কুমড়া বড়ি"></div>
-          <div class="swiper-slide"><img src="1787847456076.png" alt="কুমড়া বড়ি"></div>
-          <div class="swiper-slide"><img src="1787853947266.png" alt="কুমড়া বড়ি"></div>
-          <div class="swiper-slide"><img src="1787882127604.png" alt="কুমড়া বড়ি"></div>
-          <div class="swiper-slide"><img src="1787882603416.png" alt="কুমড়া বড়ি"></div>
+    <header>
+        <!-- Top Sliding Banner -->
+        <div class="top-banner-slider">
+            <div class="top-banner-track">
+                <!-- Main 6 Images -->
+                <img src="1788114278805.png" alt="Barirbazar Naogaon Banner">
+                <img src="1788114290299.png" alt="Barirbazar Naogaon Banner">
+                <img src="1788114297583.png" alt="Barirbazar Naogaon Banner">
+                <img src="1788114309105.png" alt="Barirbazar Naogaon Banner">
+                <img src="1788114671232.png" alt="Barirbazar Naogaon Banner">
+                <img src="1788114729948.png" alt="Barirbazar Naogaon Banner">
+                <!-- Duplicate 6 Images for Seamless Loop -->
+                <img src="1788114278805.png" alt="Barirbazar Naogaon Banner">
+                <img src="1788114290299.png" alt="Barirbazar Naogaon Banner">
+                <img src="1788114297583.png" alt="Barirbazar Naogaon Banner">
+                <img src="1788114309105.png" alt="Barirbazar Naogaon Banner">
+                <img src="1788114671232.png" alt="Barirbazar Naogaon Banner">
+                <img src="1788114729948.png" alt="Barirbazar Naogaon Banner">
+            </div>
         </div>
-        <div class="swiper-pagination"></div>
-        <div class="swiper-button-next"></div>
-        <div class="swiper-button-prev"></div>
-      </div>
+        <h1 style="margin-top: 15px;">🌿 খাঁটি কুমড়া বড়ি</h1>
+        <p>নওগাঁর রানীনগর • ঐতিহ্যবাহী ঐতিহ্যবাহী স্বাদ</p>
+    </header>
+
+    <div class="hero">
+        <h2>মা-বোনের কোমোল হাতের ছোঁয়ায় ❤️</h2>
+        <p>ঘরোয়া পদ্ধতিতে যত্ন ও ভালোবাসায় তৈরি আমাদের খাঁটি কুমড়া বড়ি। স্বাদে ঐতিহ্য, তৈরিতে মায়ের হাতের ভালোবাসা।</p>
+        <img src="bori.png" alt="খাঁটি কুমড়া বড়ি" class="hero-img">
+        <div>
+            <a class="btn order-btn-top" href="#order-form-section">🛒 অর্ডার করতে চাই</a><br>
+            <a class="btn wa" href="https://wa.me/8801737326621">💬 +8801737326621</a>
+        </div>
     </div>
 
-  </div>
-</section>
-
-<section>
-  <h2>কেন আমাদের কুমড়া বড়ি?</h2>
-  <div class="features">
-    <div class="feature">
-      <b>🏡 ঘরোয়া ও ঐতিহ্যবাহী তৈরি</b>
-      পরিবারের নিজস্ব যত্নে এবং গ্রাম্য ঐতিহ্য বজায় রেখে সম্পূর্ণ ঘরোয়া পরিবেশে তৈরি।
-    </div>
-    <div class="feature">
-      <b>🌾 মাসকলাই ও কুমড়ার মেলবন্ধন</b>
-      সেরা মানের মাসকলাই ও পাকা চালকুমড়ার নিখুঁত মিশ্রণে আসল ও সেরা স্বাদ।
-    </div>
-    <div class="feature">
-      <b>☀️ শতভাগ প্রাকৃতিকভাবে শুকানো</b>
-      কোনো কেমিক্যাল ছাড়াই কড়া রোদে শুকিয়ে প্রস্তুত, তাই রান্নায় অসাধারণ টেক্সচার থাকে।
-    </div>
-  </div>
-</section>
-
-<section id="order-form-section">
-  <div class="card checkout-section">
-    
-    <div class="alert-red">কুমড়ো বড়ি নিতে অগ্রিম কোন মূল্য পরিশোধ করতে হয়না 💸</div>
-    <div class="alert-grey">অর্ডার কনফার্ম করতে নিচের ফর্মটি পূরণ করুন ⤵</div>
-
-    <!-- নতুন অপশন: ৫০০ গ্রাম -->
-    <div class="product-card" onclick="selectProduct(this, 350, '৫০০ গ্রাম')">
-      <input type="radio" name="product_select">
-      <img src="bori.png" alt="Kumro Bori">
-      <div class="product-details">
-        <div class="product-title">কুমড়ো বড়ি-৫০০ গ্রাম( নিজেদের হাতের তৈরী)</div>
-        <div class="product-qty">× 1</div>
-        <div class="product-price">350৳</div>
-      </div>
-    </div>
-
-    <!-- প্রোডাক্ট ১: ১ কেজি (ডিফল্ট সিলেক্টেড) -->
-    <div class="product-card selected" onclick="selectProduct(this, 650, '১ কেজি')">
-      <input type="radio" name="product_select" checked>
-      <img src="bori.png" alt="Kumro Bori">
-      <div class="product-details">
-        <div class="product-title">কুমড়ো বড়ি-১ কেজি( নিজেদের হাতের তৈরী)</div>
-        <div class="product-qty">× 1</div>
-        <div class="product-price">650৳</div>
-      </div>
-    </div>
-
-    <!-- প্রোডাক্ট ২: ২ কেজি -->
-    <div class="product-card" onclick="selectProduct(this, 1250, '২ কেজি')">
-      <input type="radio" name="product_select">
-      <img src="bori.png" alt="Kumro Bori">
-      <div class="product-details">
-        <div class="product-title">কুমড়ো বড়ি-২ কেজি( নিজেদের হাতের তৈরী)</div>
-        <div class="product-qty">× 1</div>
-        <div class="product-price">1,250৳</div>
-      </div>
-    </div>
-
-    <form id="orderForm" onsubmit="sendOrderToWhatsApp(event)" style="margin-top: 25px;">
-      <div class="form-group">
-        <label>আপনার নাম: <span>*</span></label>
-        <input type="text" id="custName" placeholder="" required>
-      </div>
-
-      <div class="form-group">
-        <label>আপনার ঠিকানা: <span>*</span></label>
-        <input type="text" id="custAddress" placeholder="" required>
-      </div>
-
-      <div class="form-group">
-        <label>মোবাইল নাম্বার: <span>*</span></label>
-        <input type="tel" id="custPhone" placeholder="" required>
-      </div>
-
-      <div class="form-group">
-        <label>Country / Region <span>*</span></label>
-        <input type="text" value="Bangladesh" readonly style="background:#f9f9f9; color:#666;">
-      </div>
-
-      <div class="form-group">
-        <label>Shipping</label>
-        <div class="shipping-option" onclick="selectShipping(20)">
-          <label style="margin:0; cursor:pointer;"><input type="radio" name="shipping" value="20" checked> নওগাঁ পৌরসভার মধ্যে</label>
-          <span>20৳</span>
+    <section>
+        <h2>আমাদের ঐতিহ্য ও তৈরি প্রক্রিয়া</h2>
+        <div class="card story">
+            <p>প্রথমে ভালো মানের মাসকলাই ভাঙানো হয়। এরপর রোদরে ভিজিয়ে রেখে ভোররাতে পরিবারের সবাই মিলে পাঠায় বেটে বড়ির মিশ্রণ তৈরি করা হয়। মা-বোনেরা হাতে তৈরি করে রোদ্রে শুকান।</p>
+            <div class="media-grid">
+                <div class="video-container">
+                    <video autoplay muted loop playsinline controls poster="bori.png">
+                        <source src="InShot_20260829_002652318.mp4" type="video/mp4">
+                        আপনার ব্রাউজারে ভিডিও চলবে না।
+                    </video>
+                </div>
+                <div class="swiper mySwiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide"><img src="bori.png" alt="কুমড়া বড়ি"></div>
+                        <div class="swiper-slide"><img src="1787845338733.png" alt="কুমড়া বড়ি"></div>
+                        <div class="swiper-slide"><img src="1787846665604.png" alt="কুমড়া বড়ি"></div>
+                        <div class="swiper-slide"><img src="1787847456076.png" alt="কুমড়া বড়ি"></div>
+                        <div class="swiper-slide"><img src="1787853947266.png" alt="কুমড়া বড়ি"></div>
+                        <div class="swiper-slide"><img src="1787882127604.png" alt="কুমড়া বড়ি"></div>
+                        <div class="swiper-slide"><img src="1787882603416.png" alt="কুমড়া বড়ি"></div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                </div>
+            </div>
         </div>
-        <div class="shipping-option" onclick="selectShipping(30)">
-          <label style="margin:0; cursor:pointer;"><input type="radio" name="shipping" value="30"> নওগাঁ পৌরসভার বাহিরে</label>
-          <span>30৳</span>
+    </section>
+
+    <section>
+        <h2>কেন আমাদের কুমড়া বড়ি?</h2>
+        <div class="features">
+            <div class="feature">
+                <b>🏡 ঘরোয়া ও ঐতিহ্যবাহী তৈরি</b>
+                পরিবারের নিজস্ব যত্ন এবং গ্রাম্য ঐতিহ্য বজায় রেখে সম্পূর্ণ ঘরোয়া পরিবেশে তৈরি।
+            </div>
+            <div class="feature">
+                <b>🌾 মাসকলাই ও কুমড়ার সিলেকশন</b>
+                সেরা মানের মাসকলাই ও পাকা চালকুমড়ার নিখুঁত মিশ্রণে আসল ও সেরা স্বাদ।
+            </div>
+            <div class="feature">
+                <b>⭐ শতভাগ কেমিক্যালমুক্ত গ্যারান্টি</b>
+                কোনো কেমিক্যাল ছাড়াই কড়া রোদে শুকানো প্রস্তুত, তাই স্বাস্থ্যসম্মত টিকসই স্বাদ।
+            </div>
         </div>
-        <div class="shipping-option" onclick="selectShipping(120)">
-          <label style="margin:0; cursor:pointer;"><input type="radio" name="shipping" value="120"> সারা বাংলাদেশ</label>
-          <span>120৳</span>
+    </section>
+
+    <section id="order-form-section">
+        <div class="card checkout-section">
+            <div class="alert-red">কুমড়া বড়ি নিতে অগ্রিম কোন টাকা পরিশোধ করতে হবেনা 🌿</div>
+            <div class="alert-grey">অর্ডার করতে নিচের ফর্মটি পূরণ করুন 👇</div>
+
+            <!-- প্যাকেজ ১: ৫০০ গ্রাম -->
+            <div class="product-card" onclick="selectProduct(this, 350, '৫০০ গ্রাম')">
+                <input type="radio" name="product_select">
+                <img src="bori.png" alt="Kumra Bori">
+                <div class="product-details">
+                    <div class="product-title">কুমড়া বড়ি-৫০০ গ্রাম (নিজের হাতের তৈরি)</div>
+                    <div class="product-qty">১ × ১</div>
+                    <div class="product-price">350৳</div>
+                </div>
+            </div>
+
+            <!-- প্যাকেজ ২: ১ কেজি (ডিফল্ট) -->
+            <div class="product-card selected" onclick="selectProduct(this, 650, '১ কেজি')">
+                <input type="radio" name="product_select" checked>
+                <img src="bori.png" alt="Kumra Bori">
+                <div class="product-details">
+                    <div class="product-title">কুমড়া বড়ি-১ কেজি (নিজের হাতের তৈরি)</div>
+                    <div class="product-qty">১ × ১</div>
+                    <div class="product-price">650৳</div>
+                </div>
+            </div>
+
+            <!-- প্যাকেজ ৩: ২ কেজি -->
+            <div class="product-card" onclick="selectProduct(this, 1250, '২ কেজি')">
+                <input type="radio" name="product_select">
+                <img src="bori.png" alt="Kumra Bori">
+                <div class="product-details">
+                    <div class="product-title">কুমড়া বড়ি-২ কেজি (নিজের হাতের তৈরি)</div>
+                    <div class="product-qty">১ × ১</div>
+                    <div class="product-price">1,250৳</div>
+                </div>
+            </div>
+
+            <form id="orderForm" onsubmit="sendOrderToWhatsApp(event)" style="margin-top: 25px;">
+                <div class="form-group">
+                    <label>আপনার নাম: <span>*</span></label>
+                    <input type="text" id="custName" placeholder="আপনার নাম লিখুন" required>
+                </div>
+
+                <div class="form-group">
+                    <label>আপনার ঠিকানা: <span>*</span></label>
+                    <input type="text" id="custAddress" placeholder="থানা ও জেলাসহ পূর্ণাঙ্গ ঠিকানা" required>
+                </div>
+
+                <div class="form-group">
+                    <label>মোবাইল নম্বর: <span>*</span></label>
+                    <input type="tel" id="custPhone" placeholder="১১ ডিজিটের মোবাইল নম্বর" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Country / Region <span>*</span></label>
+                    <input type="text" value="Bangladesh" readonly style="background:#f9f9f9; color:#666;">
+                </div>
+
+                <div class="form-group">
+                    <label>Shipping</label>
+                    <div class="shipping-option" onclick="selectShipping(20)">
+                        <label style="margin:0; cursor:pointer;"><input type="radio" name="shipping" value="20" checked> নওগাঁ পৌরসভা এলাকা</label>
+                        <span>20৳</span>
+                    </div>
+                    <div class="shipping-option" onclick="selectShipping(30)">
+                        <label style="margin:0; cursor:pointer;"><input type="radio" name="shipping" value="30"> নওগাঁ পৌরসভার বাহিরে</label>
+                        <span>30৳</span>
+                    </div>
+                    <div class="shipping-option" onclick="selectShipping(120)">
+                        <label style="margin:0; cursor:pointer;"><input type="radio" name="shipping" value="120"> সারা বাংলাদেশ</label>
+                        <span>120৳</span>
+                    </div>
+                </div>
+
+                <div class="order-summary">
+                    <div class="summary-header">
+                        <span>Product</span>
+                        <span>Subtotal</span>
+                    </div>
+                    <div class="summary-item">
+                        <div class="summary-item-left">
+                            <img src="bori.png" id="summaryImg" alt="Product">
+                            <span id="summaryProdName">কুমড়া বড়ি-১ কেজি (নিজের হাতের তৈরি) × 1</span>
+                        </div>
+                        <span id="summaryProdPrice">650৳</span>
+                    </div>
+
+                    <div class="summary-row">
+                        <span>Subtotal</span>
+                        <span id="summarySubtotal">650৳</span>
+                    </div>
+                    <div class="summary-row">
+                        <span>Shipping</span>
+                        <span id="summaryShipping">20৳</span>
+                    </div>
+                    <div class="summary-row total">
+                        <span>Total</span>
+                        <span id="summaryTotal">670৳</span>
+                    </div>
+                </div>
+
+                <button type="submit" class="place-order-btn" id="submitBtn">
+                    🔒 Place Order <span id="btnPrice">670৳</span>
+                </button>
+            </form>
         </div>
-      </div>
+    </section>
 
-      <div class="order-summary">
-        <div class="summary-header">
-          <span>Product</span>
-          <span>Subtotal</span>
-        </div>
-        
-        <div class="summary-item">
-          <div class="summary-item-left">
-            <img src="bori.png" id="summaryImg" alt="Product">
-            <span id="summaryProdName">কুমড়ো বড়ি-১ কেজি( নিজেদের হাতের তৈরী) × 1</span>
-          </div>
-          <span id="summaryProdPrice">650৳</span>
-        </div>
+    <footer>
+        © 2026 খাঁটি কুমড়া বড়ি • বাড়িড়বাজার, নওগাঁ
+    </footer>
 
-        <div class="summary-row">
-          <span>Subtotal</span>
-          <span id="summarySubtotal">650৳</span>
-        </div>
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            slidesPerView: 1,
+            spaceBetween: 20,
+            loop: true,
+            autoplay: {
+                delay: 3500,
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+        });
 
-        <div class="summary-row">
-          <span>Shipping</span>
-          <span id="summaryShipping">20৳</span>
-        </div>
+        let selectedPrice = 650;
+        let selectedWeight = '১ কেজি';
+        let deliveryCharge = 20;
 
-        <div class="summary-row total">
-          <span>Total</span>
-          <span id="summaryTotal">670৳</span>
-        </div>
-      </div>
+        function selectProduct(element, price, weight) {
+            document.querySelectorAll('.product-card').forEach(el => el.classList.remove('selected'));
+            document.querySelectorAll('.product-card input[type="radio"]').forEach(el => el.checked = false);
 
-      <button type="submit" class="place-order-btn" id="submitBtn">
-        🔒 Place Order <span id="btnPrice">670৳</span>
-      </button>
-    </form>
+            element.classList.add('selected');
+            element.querySelector('input[type="radio"]').checked = true;
 
-  </div>
-</section>
+            selectedPrice = price;
+            selectedWeight = weight;
 
-<footer>
-  © 2026 খাঁটি কুমড়া বড়ি • রাণীনগর, নওগাঁ
-</footer>
+            updateCalculation();
+        }
 
-<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-<script>
-  var swiper = new Swiper(".mySwiper", {
-    slidesPerView: 1,
-    spaceBetween: 20,
-    loop: true,
-    autoplay: {
-      delay: 3500,
-      disableOnInteraction: false,
-    },
-    pagination: {
-      el: ".swiper-pagination",
-      clickable: true,
-    },
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
-    }
-  });
+        function selectShipping(cost) {
+            deliveryCharge = cost;
+            updateCalculation();
+        }
 
-  let selectedPrice = 650;
-  let selectedWeight = '১ কেজি';
-  let deliveryCharge = 20;
+        function updateCalculation() {
+            let total = selectedPrice + deliveryCharge;
 
-  function selectProduct(element, price, weight) {
-    document.querySelectorAll('.product-card').forEach(el => el.classList.remove('selected'));
-    document.querySelectorAll('.product-card input[type="radio"]').forEach(el => el.checked = false);
-    
-    element.classList.add('selected');
-    element.querySelector('input[type="radio"]').checked = true;
-    
-    selectedPrice = price;
-    selectedWeight = weight;
-    
-    updateCalculation();
-  }
+            document.getElementById('summaryProdName').innerText = `কুমড়া বড়ি-${selectedWeight} (নিজের হাতের তৈরি) × 1`;
+            document.getElementById('summaryProdPrice').innerText = `${selectedPrice}৳`;
+            document.getElementById('summarySubtotal').innerText = `${selectedPrice}৳`;
+            document.getElementById('summaryShipping').innerText = `${deliveryCharge}৳`;
+            document.getElementById('summaryTotal').innerText = `${total}৳`;
+            document.getElementById('btnPrice').innerText = `${total}৳`;
+        }
 
-  function selectShipping(cost) {
-    deliveryCharge = cost;
-    updateCalculation();
-  }
+        function sendOrderToWhatsApp(e) {
+            e.preventDefault();
 
-  function updateCalculation() {
-    let total = selectedPrice + deliveryCharge;
-    
-    document.getElementById('summaryProdName').innerText = `কুমড়ো বড়ি-${selectedWeight}( নিজেদের হাতের তৈরী) × 1`;
-    document.getElementById('summaryProdPrice').innerText = `${selectedPrice}৳`;
-    document.getElementById('summarySubtotal').innerText = `${selectedPrice}৳`;
-    document.getElementById('summaryShipping').innerText = `${deliveryCharge}৳`;
-    document.getElementById('summaryTotal').innerText = `${total}৳`;
-    document.getElementById('btnPrice').innerText = `${total}৳`;
-  }
+            let name = document.getElementById('custName').value;
+            let address = document.getElementById('custAddress').value;
+            let phone = document.getElementById('custPhone').value;
+            let total = selectedPrice + deliveryCharge;
 
-  function sendOrderToWhatsApp(e) {
-    e.preventDefault();
-    
-    let name = document.getElementById('custName').value;
-    let address = document.getElementById('custAddress').value;
-    let phone = document.getElementById('custPhone').value;
-    let total = selectedPrice + deliveryCharge;
-    
-    let message = `*নতুন অর্ডার এসেছে!*%0A%0A` +
-                  `*প্রোডাক্ট:* কুমড়ো বড়ি (${selectedWeight})%0A` +
-                  `*মূল্য:* ${selectedPrice}৳%0A` +
-                  `*ডেলিভারি চার্জ:* ${deliveryCharge}৳%0A` +
-                  `*সর্বমোট:* ${total}৳%0A%0A` +
-                  `*ক্রেতার বিবরণ:*%0A` +
-                  `*নাম:* ${name}%0A` +
-                  `*ঠিকানা:* ${address}%0A` +
-                  `*মোবাইল:* ${phone}`;
+            let message = "নতুন অর্ডার এসেছে!%0A%0A" +
+                "*প্রোডাক্ট:* কুমড়া বড়ি (" + selectedWeight + ")%0A" +
+                "*মূল্য:* " + selectedPrice + "৳%0A" +
+                "*ডেলিভারি চার্জ:* " + deliveryCharge + "৳%0A" +
+                "*সর্বমোট:* " + total + "৳%0A%0A" +
+                "*গ্রাহকের বিবরণ:*%0A" +
+                "*নাম:* " + name + "%0A" +
+                "*ঠিকানা:* " + address + "%0A" +
+                "*মোবাইল:* " + phone;
 
-    let whatsappURL = `https://wa.me/8801737326621?text=${message}`;
-    window.open(whatsappURL, '_blank');
-  }
-</script>
-
+            let whatsappURL = "https://wa.me/8801737326621?text=" + message;
+            window.open(whatsappURL, '_blank');
+        }
+    </script>
 </body>
 </html>
