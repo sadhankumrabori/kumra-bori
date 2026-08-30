@@ -37,31 +37,22 @@
             line-height: 1.7;
         }
 
-        /* Top Sliding Banner */
-        .top-banner-slider {
+        /* Fixed Top Banner Slider */
+        .top-banner-container {
             width: 100%;
-            overflow: hidden;
-            position: relative;
             background-color: #fff;
             box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            overflow: hidden;
         }
-        .top-banner-track {
-            display: flex;
-            width: 1200%;
-            animation: continuousSlide 24s linear infinite;
+        .topBannerSwiper {
+            width: 100%;
+            height: auto;
         }
-        .top-banner-track:hover {
-            animation-play-state: paused;
-        }
-        .top-banner-track img {
-            width: 8.333%;
+        .topBannerSwiper .swiper-slide img {
+            width: 100%;
             height: auto;
             display: block;
             object-fit: cover;
-        }
-        @keyframes continuousSlide {
-            0% { transform: translateX(0%); }
-            100% { transform: translateX(-50%); }
         }
 
         /* Header & Hero */
@@ -123,7 +114,6 @@
             border-radius: 16px;
             padding: 25px;
             box-shadow: 0 4px 18px #00000012;
-            transition: transform 0.3s ease;
         }
         .story { text-align: center; font-size: 18px; font-weight: 500; }
 
@@ -143,15 +133,15 @@
             border-radius: 12px;
             box-shadow: 0 4px 15px rgba(0,0,0,0.15);
         }
-        .swiper { width: 100%; height: 350px; border-radius: 12px; }
-        .swiper-slide {
+        .mySwiper { width: 100%; height: 350px; border-radius: 12px; }
+        .mySwiper .swiper-slide {
             display: flex;
             justify-content: center;
             align-items: center;
             background: #f4f4f4;
             border-radius: 12px;
         }
-        .swiper-slide img {
+        .mySwiper .swiper-slide img {
             width: 100%;
             height: 100%;
             object-fit: cover;
@@ -269,33 +259,28 @@
             .hero p { font-size: 16px; }
             .media-grid { grid-template-columns: 1fr; }
             .features { grid-template-columns: 1fr; }
-            .video-container video, .swiper { height: 250px; }
+            .video-container video, .mySwiper { height: 250px; }
         }
     </style>
 </head>
 <body>
 
-    <header>
-        <!-- Top Sliding Banner -->
-        <div class="top-banner-slider">
-            <div class="top-banner-track">
-                <!-- Main 6 Images -->
-                <img src="1788114278805.png" alt="Barirbazar Naogaon Banner">
-                <img src="1788114290299.png" alt="Barirbazar Naogaon Banner">
-                <img src="1788114297583.png" alt="Barirbazar Naogaon Banner">
-                <img src="1788114309105.png" alt="Barirbazar Naogaon Banner">
-                <img src="1788114671232.png" alt="Barirbazar Naogaon Banner">
-                <img src="1788114729948.png" alt="Barirbazar Naogaon Banner">
-                <!-- Duplicate 6 Images for Seamless Loop -->
-                <img src="1788114278805.png" alt="Barirbazar Naogaon Banner">
-                <img src="1788114290299.png" alt="Barirbazar Naogaon Banner">
-                <img src="1788114297583.png" alt="Barirbazar Naogaon Banner">
-                <img src="1788114309105.png" alt="Barirbazar Naogaon Banner">
-                <img src="1788114671232.png" alt="Barirbazar Naogaon Banner">
-                <img src="1788114729948.png" alt="Barirbazar Naogaon Banner">
+    <!-- Top Sliding Banner -->
+    <div class="top-banner-container">
+        <div class="swiper topBannerSwiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="1788114278805.png" alt="Barirbazar Naogaon Banner"></div>
+                <div class="swiper-slide"><img src="1788114290299.png" alt="Barirbazar Naogaon Banner"></div>
+                <div class="swiper-slide"><img src="1788114297583.png" alt="Barirbazar Naogaon Banner"></div>
+                <div class="swiper-slide"><img src="1788114309105.png" alt="Barirbazar Naogaon Banner"></div>
+                <div class="swiper-slide"><img src="1788114671232.png" alt="Barirbazar Naogaon Banner"></div>
+                <div class="swiper-slide"><img src="1788114729948.png" alt="Barirbazar Naogaon Banner"></div>
             </div>
         </div>
-        <h1 style="margin-top: 15px;">🌿 খাঁটি কুমড়া বড়ি</h1>
+    </div>
+
+    <header>
+        <h1>🌿 খাঁটি কুমড়া বড়ি</h1>
         <p>নওগাঁর রানীনগর • ঐতিহ্যবাহী ঐতিহ্যবাহী স্বাদ</p>
     </header>
 
@@ -372,7 +357,7 @@
                 </div>
             </div>
 
-            <!-- প্যাকেজ ২: ১ কেজি (ডিফল্ট) -->
+            <!-- প্যাকেজ ২: ১ কেজি -->
             <div class="product-card selected" onclick="selectProduct(this, 650, '১ কেজি')">
                 <input type="radio" name="product_select" checked>
                 <img src="bori.png" alt="Kumra Bori">
@@ -472,6 +457,18 @@
     <!-- Swiper JS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script>
+        // Top Banner Slider Script
+        var topBannerSwiper = new Swiper(".topBannerSwiper", {
+            slidesPerView: 1,
+            spaceBetween: 0,
+            loop: true,
+            autoplay: {
+                delay: 2500,
+                disableOnInteraction: false,
+            },
+        });
+
+        // Middle Gallery Slider Script
         var swiper = new Swiper(".mySwiper", {
             slidesPerView: 1,
             spaceBetween: 20,
