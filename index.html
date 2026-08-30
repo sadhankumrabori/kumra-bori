@@ -13,58 +13,50 @@
 body{font-family:Arial,"Noto Sans Bengali",sans-serif;background:#fffaf0;color:#3d2b1f;line-height:1.7}
 header{background:linear-gradient(135deg,#7b3f00,#b86b16);color:white;text-align:center;padding:18px 15px}
 header h1{font-size:30px;margin-bottom:4px} header p{font-size:16px}
-.hero{padding:45px 20px;text-align:center;background:#fff0cf}
+
+/* Hero Section Updates */
+.hero{padding:30px 20px;text-align:center;background:#fff0cf}
 .hero h2{font-size:32px;color:#713700;margin-bottom:12px}
 .hero p{max-width:700px;margin:auto;font-size:18px}
-.btn{display:inline-block;margin:15px 7px 0;padding:12px 22px;border-radius:30px;text-decoration:none;font-weight:bold;cursor:pointer;border:none;}
-.order-btn-top{background:#f25c22;color:#fff;font-size:18px;padding:14px 28px;border-radius:30px;}
-.wa{background:#25d366;color:#fff;font-size:18px;padding:14px 28px;border-radius:30px;}
+.hero-img {width: 100%; max-width: 320px; border-radius: 16px; margin: 15px auto; display: block; box-shadow: 0 4px 15px rgba(0,0,0,0.15);}
 
-section{max-width:950px;margin:auto;padding:35px 20px}
+.btn{display:inline-block;margin:10px 7px;padding:14px 28px;border-radius:30px;text-decoration:none;font-weight:bold;cursor:pointer;border:none;}
+.order-btn-top{background:#f25c22;color:#fff;font-size:18px;}
+.wa{background:#25d366;color:#fff;font-size:18px;}
+
+section{max-width:1000px;margin:auto;padding:35px 20px}
 section h2{text-align:center;color:#7b3f00;margin-bottom:22px;font-size:27px}
 .card{background:white;border-radius:16px;padding:25px;box-shadow:0 4px 18px #00000012}
 .story{text-align:center;font-size:17px}
 
-.video-container {text-align: center; margin: 25px 0;}
-.video-container video {width: 100%; max-width: 650px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.15);}
+/* Side-by-Side Media Container (Video + Slider) */
+.media-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  align-items: center;
+  margin-top: 25px;
+}
+.video-container {width: 100%;}
+.video-container video {width: 100%; height: 350px; object-fit: cover; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.15);}
 
-.swiper {width: 100%; padding-top: 20px; padding-bottom: 45px;}
-.swiper-slide {display: flex; justify-content: center; align-items: center;}
+.swiper {width: 100%; height: 350px; border-radius: 12px;}
+.swiper-slide {display: flex; justify-content: center; align-items: center; background: #f4f4f4; border-radius: 12px;}
 .swiper-slide img {
   width: 100%;
-  max-height: 500px;
-  object-fit: contain;
+  height: 100%;
+  object-fit: cover;
   border-radius: 12px;
-  background: #f4f4f4;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.12);
 }
 
 .features{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
 .feature{text-align:center;padding:22px;background:#fff;border-radius:14px;box-shadow:0 3px 14px #00000010}
 .feature b{display:block;font-size:20px;color:#7b3f00;margin-bottom:6px}
 
+/* Form Styles */
 .checkout-section {max-width: 600px; margin: 0 auto; background: #fff; border-radius: 12px; padding: 20px;}
-
-.alert-red {
-  background-color: #ff3b30;
-  color: white;
-  text-align: center;
-  padding: 12px;
-  font-size: 18px;
-  font-weight: bold;
-  border-radius: 8px;
-  margin-bottom: 15px;
-}
-.alert-grey {
-  background-color: #b0b5b9;
-  color: #1a1a1a;
-  text-align: center;
-  padding: 12px;
-  font-size: 19px;
-  font-weight: bold;
-  border-radius: 8px;
-  margin-bottom: 25px;
-}
+.alert-red {background-color: #ff3b30; color: white; text-align: center; padding: 12px; font-size: 18px; font-weight: bold; border-radius: 8px; margin-bottom: 15px;}
+.alert-grey {background-color: #b0b5b9; color: #1a1a1a; text-align: center; padding: 12px; font-size: 19px; font-weight: bold; border-radius: 8px; margin-bottom: 25px;}
 
 .product-card {
   border: 1px solid #dcdcdc;
@@ -77,40 +69,13 @@ section h2{text-align:center;color:#7b3f00;margin-bottom:22px;font-size:27px}
   cursor: pointer;
   background: #fff;
 }
-.product-card.selected {
-  border: 2px solid #e65100;
-}
-.product-card input[type="radio"] {
-  margin-right: 15px;
-  transform: scale(1.4);
-  accent-color: #e65100;
-}
-.product-card img {
-  width: 70px;
-  height: 70px;
-  border-radius: 6px;
-  object-fit: cover;
-  margin-right: 15px;
-}
-.product-details {
-  flex-grow: 1;
-}
-.product-title {
-  font-size: 17px;
-  font-weight: bold;
-  color: #222;
-  margin-bottom: 4px;
-}
-.product-qty {
-  color: #555;
-  font-size: 15px;
-  margin-bottom: 4px;
-}
-.product-price {
-  font-size: 17px;
-  font-weight: bold;
-  color: #222;
-}
+.product-card.selected {border: 2px solid #e65100;}
+.product-card input[type="radio"] {margin-right: 15px; transform: scale(1.4); accent-color: #e65100;}
+.product-card img {width: 70px; height: 70px; border-radius: 6px; object-fit: cover; margin-right: 15px;}
+.product-details {flex-grow: 1;}
+.product-title {font-size: 17px; font-weight: bold; color: #222; margin-bottom: 4px;}
+.product-qty {color: #555; font-size: 15px; margin-bottom: 4px;}
+.product-price {font-size: 17px; font-weight: bold; color: #222;}
 
 .form-group {margin-bottom: 18px;}
 .form-group label {display: block; font-weight: bold; margin-bottom: 6px; color: #333; font-size: 15px;}
@@ -124,7 +89,6 @@ section h2{text-align:center;color:#7b3f00;margin-bottom:22px;font-size:27px}
   outline: none;
   background: #fff;
 }
-.form-group input:focus, .form-group textarea:focus {border-color: #f25c22;}
 
 .shipping-option {
   border: 1px solid #dcdcdc;
@@ -138,50 +102,13 @@ section h2{text-align:center;color:#7b3f00;margin-bottom:22px;font-size:27px}
 }
 .shipping-option input {margin-right: 10px; transform: scale(1.2); accent-color: #f25c22;}
 
-.order-summary {
-  margin-top: 25px;
-  border-top: 1px solid #eee;
-  padding-top: 15px;
-}
-.summary-header {
-  display: flex;
-  justify-content: space-between;
-  font-weight: bold;
-  font-size: 16px;
-  border-bottom: 1px dashed #ddd;
-  padding-bottom: 10px;
-  margin-bottom: 15px;
-}
-.summary-item {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-bottom: 15px;
-}
-.summary-item-left {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-}
-.summary-item img {
-  width: 50px;
-  height: 50px;
-  border-radius: 6px;
-  object-fit: cover;
-}
-.summary-row {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 10px;
-  font-size: 16px;
-}
-.summary-row.total {
-  font-weight: bold;
-  font-size: 19px;
-  color: #000;
-  border-top: 1px solid #eee;
-  padding-top: 10px;
-}
+.order-summary {margin-top: 25px; border-top: 1px solid #eee; padding-top: 15px;}
+.summary-header {display: flex; justify-content: space-between; font-weight: bold; font-size: 16px; border-bottom: 1px dashed #ddd; padding-bottom: 10px; margin-bottom: 15px;}
+.summary-item {display: flex; align-items: center; justify-content: space-between; margin-bottom: 15px;}
+.summary-item-left {display: flex; align-items: center; gap: 12px;}
+.summary-item img {width: 50px; height: 50px; border-radius: 6px; object-fit: cover;}
+.summary-row {display: flex; justify-content: space-between; margin-bottom: 10px; font-size: 16px;}
+.summary-row.total {font-weight: bold; font-size: 19px; color: #000; border-top: 1px solid #eee; padding-top: 10px;}
 
 .place-order-btn {
   width: 100%;
@@ -194,7 +121,6 @@ section h2{text-align:center;color:#7b3f00;margin-bottom:22px;font-size:27px}
   border-radius: 30px;
   margin-top: 20px;
   cursor: pointer;
-  box-shadow: 0 4px 12px rgba(242, 92, 34, 0.3);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -203,9 +129,10 @@ section h2{text-align:center;color:#7b3f00;margin-bottom:22px;font-size:27px}
 
 footer{text-align:center;background:#3d2b1f;color:#fff;padding:20px}
 
-@media(max-width:650px){
+@media(max-width:768px){
   header h1{font-size:25px}.hero h2{font-size:27px}.features{grid-template-columns:1fr}
-  .swiper-slide img {max-height: 350px;}
+  .media-grid {grid-template-columns: 1fr;}
+  .video-container video, .swiper {height: 300px;}
 }
 </style>
 </head>
@@ -216,41 +143,54 @@ footer{text-align:center;background:#3d2b1f;color:#fff;padding:20px}
   <p>নওগাঁর রাণীনগর • খট্টেশ্বরের ঐতিহ্যবাহী স্বাদ</p>
 </header>
 
+<!-- ১. শুরুতে ছবি ও বাটন সেকশন -->
 <div class="hero">
   <h2>মা-বোনদের কোমল হাতের ছোঁয়ায় ❤️</h2>
   <p>ঘরোয়া পদ্ধতিতে যত্ন ও ভালোবাসায় তৈরি আমাদের খাঁটি কুমড়া বড়ি। স্বাদে ঐতিহ্য, তৈরিতে মায়ের হাতের ভালোবাসা।</p>
-  <div style="margin-top: 15px;">
-    <a class="btn order-btn-top" href="#order-form-section">🛒 অর্ডার করতে চাই</a>
+  
+  <!-- ঢুকেই ছবি -->
+  <img src="bori.png" alt="খাঁটি কুমড়া বড়ি" class="hero-img">
+  
+  <!-- ছবির নিচে অর্ডার অপশন -->
+  <div>
+    <a class="btn order-btn-top" href="#order-form-section">🛒 অর্ডার করতে চাই</a> <br>
     <a class="btn wa" href="https://wa.me/8801737326621">💬 +8801737326621</a>
   </div>
 </div>
 
+<!-- ২. ভিডিও ও স্লাইডার পাশাপাশি সেকশন -->
 <section>
-  <h2>আমাদের ঐতিহ্য</h2>
+  <h2>আমাদের ঐতিহ্য ও তৈরি প্রক্রিয়া</h2>
   <div class="card story">
     <p>প্রথমে ভালো মানের মাসকলাই ভাঙানো হয়। এরপর রাতভর ভিজিয়ে রেখে ভোররাতে পরিবারের সবাই মিলে পাটায় বেটে বড়ির মিশ্রণ তৈরি করা হয়। মা-কাকিদের যত্নের হাতে চাটাইয়ে বড়ি দেওয়া হয় এবং দু’দিন রোদে শুকিয়ে তৈরি হয় আমাদের খাঁটি কুমড়া বড়ি।</p>
 
-    <div class="video-container">
-      <video autoplay muted loop playsinline controls poster="bori.png">
-        <source src="InShot_20260829_002652318.mp4" type="video/mp4">
-        আপনার ব্রাউজারে ভিডিও চলবে না।
-      </video>
+    <!-- ভিডিও এবং স্লাইডার এর গ্রিড -->
+    <div class="media-grid">
+      <!-- বামে ভিডিও -->
+      <div class="video-container">
+        <video autoplay muted loop playsinline controls poster="bori.png">
+          <source src="InShot_20260829_002652318.mp4" type="video/mp4">
+          আপনার ব্রাউজারে ভিডিও চলবে না।
+        </video>
+      </div>
+
+      <!-- ডানে ছবির স্লাইডার -->
+      <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide"><img src="bori.png" alt="কুমড়া বড়ি"></div>
+          <div class="swiper-slide"><img src="1787845338733.png" alt="কুমড়া বড়ি"></div>
+          <div class="swiper-slide"><img src="1787846665694.png" alt="কুমড়া বড়ি"></div>
+          <div class="swiper-slide"><img src="1787847456076.png" alt="কুমড়া বড়ি"></div>
+          <div class="swiper-slide"><img src="1787853947266.png" alt="কুমড়া বড়ি"></div>
+          <div class="swiper-slide"><img src="1787882127604.png" alt="কুমড়া বড়ি"></div>
+          <div class="swiper-slide"><img src="1787882603416.png" alt="কুমড়া বড়ি"></div>
+        </div>
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+      </div>
     </div>
 
-    <div class="swiper mySwiper">
-      <div class="swiper-wrapper">
-        <div class="swiper-slide"><img src="bori.png" alt="কুমড়া বড়ি"></div>
-        <div class="swiper-slide"><img src="1787845338733.png" alt="কুমড়া বড়ি"></div>
-        <div class="swiper-slide"><img src="1787846665694.png" alt="কুমড়া বড়ি"></div>
-        <div class="swiper-slide"><img src="1787847456076.png" alt="কুমড়া বড়ি"></div>
-        <div class="swiper-slide"><img src="1787853947266.png" alt="কুমড়া বড়ি"></div>
-        <div class="swiper-slide"><img src="1787882127604.png" alt="কুমড়া বড়ি"></div>
-        <div class="swiper-slide"><img src="1787882603416.png" alt="কুমড়া বড়ি"></div>
-      </div>
-      <div class="swiper-pagination"></div>
-      <div class="swiper-button-next"></div>
-      <div class="swiper-button-prev"></div>
-    </div>
   </div>
 </section>
 
@@ -272,13 +212,14 @@ footer{text-align:center;background:#3d2b1f;color:#fff;padding:20px}
   </div>
 </section>
 
+<!-- ৩. অর্ডার ফর্ম সেকশন -->
 <section id="order-form-section">
   <div class="card checkout-section">
     
     <div class="alert-red">কুমড়ো বড়ি নিতে অগ্রিম কোন মূল্য পরিশোধ করতে হয়না 💸</div>
     <div class="alert-grey">অর্ডার কনফার্ম করতে নিচের ফর্মটি পূরণ করুন ⤵</div>
 
-    <!-- প্রোডাক্ট ১: ১ কেজি -->
+    <!-- প্রোডাক্ট ১ -->
     <div class="product-card selected" onclick="selectProduct(this, 650, '১ কেজি')">
       <input type="radio" name="product_select" checked>
       <img src="bori.png" alt="Kumro Bori">
@@ -289,7 +230,7 @@ footer{text-align:center;background:#3d2b1f;color:#fff;padding:20px}
       </div>
     </div>
 
-    <!-- প্রোডাক্ট ২: ২ কেজি -->
+    <!-- প্রোডাক্ট ২ -->
     <div class="product-card" onclick="selectProduct(this, 1250, '২ কেজি')">
       <input type="radio" name="product_select">
       <img src="bori.png" alt="Kumro Bori">
