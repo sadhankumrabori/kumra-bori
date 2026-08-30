@@ -36,14 +36,21 @@
 
 .top-banner-track {
     display: flex;
-    width: 200%;
-    animation: continuousSlide 8s linear infinite;
+    /* ৬টি মূল + ৬টি ডুপ্লিকেট = ১২টি ছবির জন্য ১২০০% */
+    width: 1200%;
+    animation: continuousSlide 24s linear infinite;
+}
+
+.top-banner-track:hover {
+    animation-play-state: paused;
 }
 
 .top-banner-track img {
-    width: 50%;
+    /* প্রতিটি ছবি সমান (১০০% / ১২ = ৮.৩৩%) জায়গা নেবে */
+    width: 8.333%;
     height: auto;
     display: block;
+    object-fit: cover;
 }
 
 @keyframes continuousSlide {
@@ -54,6 +61,9 @@
         transform: translateX(-50%);
     }
 }
+
+}
+
 
 
 *{box-sizing:border-box;margin:0;padding:0}
@@ -191,8 +201,19 @@ footer{text-align:center;background:#3d2b1f;color:#fff;padding:20px;font-size:16
 <!-- Top Continuous Sliding Banner -->
 <div class="top-banner-slider">
     <div class="top-banner-track">
-        <img src="1788111875147.png" alt="Barirbazar Naogaon Banner">
-        <img src="1788111875147.png" alt="Barirbazar Naogaon Banner">
+        <img src="1788114278805.png" alt="Barirbazar Naogaon Banner">
+<img src="1788114290299.png" alt="Barirbazar Naogaon Banner">
+<img src="1788114297583.png" alt="Barirbazar Naogaon Banner">
+<img src="1788114309105.png" alt="Barirbazar Naogaon Banner">
+<img src="1788114671232.png" alt="Barirbazar Naogaon Banner">
+<img src="1788114729948.png" alt="Barirbazar Naogaon Banner">
+<img src="1788114278805.png" alt="Barirbazar Naogaon Banner">
+<img src="1788114290299.png" alt="Barirbazar Naogaon Banner">
+<img src="1788114297583.png" alt="Barirbazar Naogaon Banner">
+<img src="1788114309105.png" alt="Barirbazar Naogaon Banner">
+<img src="1788114671232.png" alt="Barirbazar Naogaon Banner">
+<img src="1788114729948.png" alt="Barirbazar Naogaon Banner">
+
     </div>
 </div>
 
