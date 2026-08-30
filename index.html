@@ -17,7 +17,9 @@ header h1{font-size:30px;margin-bottom:4px} header p{font-size:16px}
 .hero h2{font-size:32px;color:#713700;margin-bottom:12px}
 .hero p{max-width:700px;margin:auto;font-size:18px}
 .btn{display:inline-block;margin:15px 7px 0;padding:12px 22px;border-radius:30px;text-decoration:none;font-weight:bold;cursor:pointer;border:none;}
-.order-btn-top{background:#198754;color:#fff}.wa{background:#25d366;color:#fff}
+.order-btn-top{background:#f25c22;color:#fff;font-size:18px;padding:14px 28px;border-radius:30px;}
+.wa{background:#25d366;color:#fff;font-size:18px;padding:14px 28px;border-radius:30px;}
+
 section{max-width:950px;margin:auto;padding:35px 20px}
 section h2{text-align:center;color:#7b3f00;margin-bottom:22px;font-size:27px}
 .card{background:white;border-radius:16px;padding:25px;box-shadow:0 4px 18px #00000012}
@@ -42,52 +44,93 @@ section h2{text-align:center;color:#7b3f00;margin-bottom:22px;font-size:27px}
 .feature{text-align:center;padding:22px;background:#fff;border-radius:14px;box-shadow:0 3px 14px #00000010}
 .feature b{display:block;font-size:20px;color:#7b3f00;margin-bottom:6px}
 
-/* --- ORDER FORM STYLES --- */
-.checkout-section {max-width: 650px; margin: 0 auto;}
-.product-option {
+/* --- SCREENSHOT MATCHED ORDER FORM STYLES --- */
+.checkout-section {max-width: 600px; margin: 0 auto; background: #fff; border-radius: 12px; padding: 20px;}
+
+.alert-red {
+  background-color: #ff3b30;
+  color: white;
+  text-align: center;
+  padding: 12px;
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+.alert-grey {
+  background-color: #b0b5b9;
+  color: #1a1a1a;
+  text-align: center;
+  padding: 12px;
+  font-size: 19px;
+  font-weight: bold;
+  border-radius: 8px;
+  margin-bottom: 25px;
+}
+
+.product-card {
+  border: 1px solid #dcdcdc;
+  border-radius: 8px;
+  padding: 16px;
+  margin-bottom: 15px;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  border: 2px solid #e0e0e0;
-  border-radius: 12px;
-  padding: 15px;
-  margin-bottom: 12px;
-  cursor: pointer;
   position: relative;
-  transition: all 0.3s ease;
+  cursor: pointer;
+  background: #fff;
 }
-.product-option.selected {border-color: #e65100; background-color: #fff9f5;}
-.product-option input[type="radio"] {margin-right: 12px; transform: scale(1.3); accent-color: #e65100;}
-.product-info-left {display: flex; align-items: center; gap: 12px;}
-.product-img {width: 50px; height: 50px; border-radius: 8px; object-fit: cover;}
-.badge {
-  position: absolute;
-  top: -10px;
-  right: 15px;
-  background: #e65100;
-  color: white;
-  font-size: 12px;
-  padding: 2px 10px;
-  border-radius: 20px;
+.product-card.selected {
+  border: 2px solid #e65100;
+}
+.product-card input[type="radio"] {
+  margin-right: 15px;
+  transform: scale(1.4);
+  accent-color: #e65100;
+}
+.product-card img {
+  width: 70px;
+  height: 70px;
+  border-radius: 6px;
+  object-fit: cover;
+  margin-right: 15px;
+}
+.product-details {
+  flex-grow: 1;
+}
+.product-title {
+  font-size: 17px;
   font-weight: bold;
+  color: #222;
+  margin-bottom: 4px;
+}
+.product-qty {
+  color: #555;
+  font-size: 15px;
+  margin-bottom: 4px;
+}
+.product-price {
+  font-size: 17px;
+  font-weight: bold;
+  color: #222;
 }
 
 .form-group {margin-bottom: 18px;}
-.form-group label {display: block; font-weight: bold; margin-bottom: 6px; color: #333;}
+.form-group label {display: block; font-weight: bold; margin-bottom: 6px; color: #333; font-size: 15px;}
 .form-group label span {color: red;}
-.form-group input, .form-group textarea {
+.form-group input, .form-group textarea, .form-group select {
   width: 100%;
   padding: 12px 15px;
   border: 1px solid #ccc;
-  border-radius: 8px;
+  border-radius: 6px;
   font-size: 15px;
   outline: none;
+  background: #fff;
 }
-.form-group input:focus, .form-group textarea:focus {border-color: #e65100;}
+.form-group input:focus, .form-group textarea:focus {border-color: #f25c22;}
 
-.shipping-box {
-  border: 1px solid #e0e0e0;
-  border-radius: 8px;
+.shipping-option {
+  border: 1px solid #dcdcdc;
+  border-radius: 6px;
   padding: 12px 15px;
   margin-bottom: 10px;
   display: flex;
@@ -95,31 +138,54 @@ section h2{text-align:center;color:#7b3f00;margin-bottom:22px;font-size:27px}
   align-items: center;
   cursor: pointer;
 }
-.shipping-box input {margin-right: 10px; accent-color: #e65100;}
+.shipping-option input {margin-right: 10px; transform: scale(1.2); accent-color: #f25c22;}
 
 .order-summary {
-  border-top: 1px dashed #ccc;
-  margin-top: 20px;
+  margin-top: 25px;
+  border-top: 1px solid #eee;
   padding-top: 15px;
 }
-.summary-row {display: flex; justify-content: space-between; margin-bottom: 8px; font-size: 15px;}
-.summary-row.total {font-weight: bold; font-size: 18px; color: #000; border-top: 1px solid #eee; padding-top: 8px;}
-
-.cod-box {
-  background: #f8f9fa;
-  border-radius: 8px;
-  padding: 15px;
-  margin-top: 15px;
+.summary-header {
+  display: flex;
+  justify-content: space-between;
+  font-weight: bold;
+  font-size: 16px;
+  border-bottom: 1px dashed #ddd;
+  padding-bottom: 10px;
+  margin-bottom: 15px;
 }
-.cod-alert {
-  background: #e9ecef;
-  padding: 10px;
+.summary-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+.summary-item-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.summary-item img {
+  width: 50px;
+  height: 50px;
   border-radius: 6px;
-  margin-top: 10px;
-  font-size: 14px;
+  object-fit: cover;
+}
+.summary-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+.summary-row.total {
+  font-weight: bold;
+  font-size: 19px;
+  color: #000;
+  border-top: 1px solid #eee;
+  padding-top: 10px;
 }
 
-.submit-btn {
+.place-order-btn {
   width: 100%;
   background: #f25c22;
   color: white;
@@ -127,10 +193,14 @@ section h2{text-align:center;color:#7b3f00;margin-bottom:22px;font-size:27px}
   font-weight: bold;
   padding: 15px;
   border: none;
-  border-radius: 10px;
+  border-radius: 30px;
   margin-top: 20px;
   cursor: pointer;
-  box-shadow: 0 4px 10px rgba(242, 92, 34, 0.3);
+  box-shadow: 0 4px 12px rgba(242, 92, 34, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
 }
 
 footer{text-align:center;background:#3d2b1f;color:#fff;padding:20px}
@@ -151,8 +221,10 @@ footer{text-align:center;background:#3d2b1f;color:#fff;padding:20px}
 <div class="hero">
   <h2>মা-বোনদের কোমল হাতের ছোঁয়ায় ❤️</h2>
   <p>ঘরোয়া পদ্ধতিতে যত্ন ও ভালোবাসায় তৈরি আমাদের খাঁটি কুমড়া বড়ি। স্বাদে ঐতিহ্য, তৈরিতে মায়ের হাতের ভালোবাসা।</p>
-  <a class="btn order-btn-top" href="#order-form-section">📞 অর্ডার করুন</a>
-  <a class="btn wa" href="https://wa.me/8801737326621">💬 WhatsApp</a>
+  <div style="margin-top: 15px;">
+    <a class="btn order-btn-top" href="#order-form-section">🛒 অর্ডার করতে চাই</a>
+    <a class="btn wa" href="https://wa.me/8801737326621">💬 +8801737326621</a>
+  </div>
 </div>
 
 <section>
@@ -204,116 +276,111 @@ footer{text-align:center;background:#3d2b1f;color:#fff;padding:20px}
   </div>
 </section>
 
-<!-- --- চেকআউট ও অর্ডার ফর্ম সেকশন --- -->
+<!-- --- স্ক্রিনশট অনুযায়ী অর্ডার ফর্ম সেকশন --- -->
 <section id="order-form-section">
   <div class="card checkout-section">
-    <h2 style="text-align:left; color:#333; margin-bottom:15px;">অর্ডার নিশ্চিত করতে প্রোডাক্ট ও তথ্য দিন</h2>
     
-    <!-- প্রোডাক্ট নির্বাচন -->
-    <div class="product-option selected" onclick="selectProduct(this, 490, '500 গ্রাম')">
-      <div class="product-info-left">
-        <input type="radio" name="product" checked>
-        <img src="1797933102661.png" class="product-img" alt="Kumro Bori">
-        <div>
-          <strong>Kumro Bori (কুমড়ো বড়ি)</strong><br>
-          <small style="color:#666;">500 গ্রাম</small>
-        </div>
+    <div class="alert-red">কুমড়ো বড়ি নিতে অগ্রিম কোন মূল্য পরিশোধ করতে হয়না 💸</div>
+    <div class="alert-grey">অর্ডার কনফার্ম করতে নিচের ফর্মটি পূরণ করুন ⤵</div>
+
+    <!-- প্রোডাক্ট ১: ১ কেজি -->
+    <div class="product-card selected" onclick="selectProduct(this, 650, '১ কেজি')">
+      <input type="radio" name="product_select" checked>
+      <img src="1797933102661.png" alt="Kumro Bori">
+      <div class="product-details">
+        <div class="product-title">কুমড়ো বড়ি-১ কেজি( নিজেদের হাতের তৈরী)</div>
+        <div class="product-qty">× 1</div>
+        <div class="product-price">650৳</div>
       </div>
-      <div><strong>৳ 490.00</strong></div>
     </div>
 
-    <div class="product-option" onclick="selectProduct(this, 750, '1 কেজি')">
-      <span class="badge">বেশি বিক্রিয়</span>
-      <div class="product-info-left">
-        <input type="radio" name="product">
-        <img src="1797933102661.png" class="product-img" alt="Kumro Bori">
-        <div>
-          <strong>Kumro Bori (কুমড়ো বড়ি)</strong><br>
-          <small style="color:#666;">1 কেজি</small>
-        </div>
+    <!-- প্রোডাক্ট ২: ২ কেজি -->
+    <div class="product-card" onclick="selectProduct(this, 1250, '২ কেজি')">
+      <input type="radio" name="product_select">
+      <img src="1797933102661.png" alt="Kumro Bori">
+      <div class="product-details">
+        <div class="product-title">কুমড়ো বড়ি-২ কেজি( নিজেদের হাতের তৈরী)</div>
+        <div class="product-qty">× 1</div>
+        <div class="product-price">1,250৳</div>
       </div>
-      <div><strong>৳ 750.00</strong></div>
     </div>
 
-    <div class="product-option" onclick="selectProduct(this, 1350, '2 কেজি')">
-      <span class="badge" style="background:#2e7d32;">ডেলিভারি চার্জ ফ্রি!</span>
-      <div class="product-info-left">
-        <input type="radio" name="product">
-        <img src="1797933102661.png" class="product-img" alt="Kumro Bori">
-        <div>
-          <strong>Kumro Bori (কুমড়ো বড়ি)</strong><br>
-          <small style="color:#666;">2 কেজি</small>
-        </div>
-      </div>
-      <div><strong>৳ 1,350.00</strong></div>
-    </div>
-
-    <!-- ক্রেতার তথ্য -->
-    <h3 style="margin: 25px 0 15px 0; font-size:18px;">এখানে আপনার তথ্য দিন...</h3>
-    <form id="checkoutForm" onsubmit="sendOrder(event)">
+    <!-- ইনপুট ফর্ম -->
+    <form id="orderForm" onsubmit="sendOrderToWhatsApp(event)" style="margin-top: 25px;">
       <div class="form-group">
-        <label>আপনার নাম <span>*</span></label>
-        <input type="text" id="custName" placeholder="পূর্ণ নাম লিখুন" required>
+        <label>আপনার নাম: <span>*</span></label>
+        <input type="text" id="custName" placeholder="" required>
       </div>
 
       <div class="form-group">
-        <label>সম্পূর্ণ ঠিকানা লিখুন:- <span>*</span></label>
-        <textarea id="custAddress" rows="2" placeholder="বাড়ি/গ্রাম, এলাকা, থানা, জেলা..." required></textarea>
+        <label>আপনার ঠিকানা: <span>*</span></label>
+        <input type="text" id="custAddress" placeholder="" required>
       </div>
 
       <div class="form-group">
-        <label>ফোন নাম্বার <span>*</span></label>
-        <input type="tel" id="custPhone" placeholder="016***********" required>
+        <label>মোবাইল নাম্বার: <span>*</span></label>
+        <input type="tel" id="custPhone" placeholder="" required>
       </div>
 
-      <!-- শিপিং সিলেক্ট -->
-      <h3 style="margin: 20px 0 10px 0; font-size:18px;">Shipping</h3>
-      <div class="shipping-box" onclick="selectShipping(70)">
-        <label style="margin:0; cursor:pointer;"><input type="radio" name="shipping" value="70" checked> ঢাকার ভিতরে:</label>
-        <span>৳ 70.00</span>
+      <div class="form-group">
+        <label>Country / Region <span>*</span></label>
+        <input type="text" value="Bangladesh" readonly style="background:#f9f9f9; color:#666;">
       </div>
-      <div class="shipping-box" onclick="selectShipping(110)">
-        <label style="margin:0; cursor:pointer;"><input type="radio" name="shipping" value="110"> ঢাকার বাহিরের জেলাসমূহ:</label>
-        <span>৳ 110.00</span>
+
+      <!-- শিপিং অপশন -->
+      <div class="form-group">
+        <label>Shipping</label>
+        <div class="shipping-option" onclick="selectShipping(20)">
+          <label style="margin:0; cursor:pointer;"><input type="radio" name="shipping" value="20" checked> নওগাঁ পৌরসভার মধ্যে</label>
+          <span>20৳</span>
+        </div>
+        <div class="shipping-option" onclick="selectShipping(30)">
+          <label style="margin:0; cursor:pointer;"><input type="radio" name="shipping" value="30"> নওগাঁ পৌরসভার বাহিরে</label>
+          <span>30৳</span>
+        </div>
+        <div class="shipping-option" onclick="selectShipping(120)">
+          <label style="margin:0; cursor:pointer;"><input type="radio" name="shipping" value="120"> সারা বাংলাদেশ</label>
+          <span>120৳</span>
+        </div>
       </div>
 
       <!-- অর্ডার সামারি -->
-      <h3 style="margin: 25px 0 15px 0; font-size:18px;">আপনি যা অর্ডার করতে যাচ্ছেন</h3>
       <div class="order-summary">
-        <div class="summary-row">
-          <span><strong>Product</strong></span>
-          <span><strong>Subtotal</strong></span>
+        <div class="summary-header">
+          <span>Product</span>
+          <span>Subtotal</span>
         </div>
-        <div class="summary-row" style="color:#666;">
-          <span id="summaryProdName">Kumro Bori - 500 গ্রাম × 1</span>
-          <span id="summaryProdPrice">৳ 490.00</span>
+        
+        <div class="summary-item">
+          <div class="summary-item-left">
+            <img src="1797933102661.png" alt="Product">
+            <span id="summaryProdName">কুমড়ো বড়ি-১ কেজি( নিজেদের হাতের তৈরী) × 1</span>
+          </div>
+          <span id="summaryProdPrice">650৳</span>
         </div>
+
         <div class="summary-row">
           <span>Subtotal</span>
-          <span id="summarySubtotal">৳ 490.00</span>
+          <span id="summarySubtotal">650৳</span>
         </div>
+
         <div class="summary-row">
-          <span>Delivery Charge</span>
-          <span id="summaryDelivery">৳ 70.00</span>
+          <span>Shipping</span>
+          <span id="summaryShipping">20৳</span>
         </div>
+
         <div class="summary-row total">
           <span>Total</span>
-          <span id="summaryTotal">৳ 560.00</span>
+          <span id="summaryTotal">670৳</span>
         </div>
       </div>
 
-      <!-- ক্যাশ অন ডেলিভারি বার্তা -->
-      <div class="cod-box">
-        <strong>ক্যাশ অন ডেলিভারী</strong>
-        <div class="cod-alert">
-          ডেলিভারী ম্যানের হাতে টাকা পরিশোধ করবেন।
-        </div>
-      </div>
-
-      <p style="font-size:12px; color:#666; margin-top:15px;">"আপনার ব্যক্তিগত তথ্য শুধুমাত্র অর্ডার সম্পন্ন ও উন্নত সেবা প্রদানের জন্য ব্যবহার করা হবে।" <a href="#" style="color:#e65100;">privacy policy</a>.</p>
-
-      <button type="submit" class="submit-btn" id="confirmBtn">🔒 অর্ডার কনফার্ম ৳ 560.00</button>
+      <!-- অর্ডার প্লেস বাটন -->
+      <button type="submit" class="place-order-btn" id="submitBtn">
+        🔒 Place Order <span id="btnPrice">670৳</span>
+      </button>
     </form>
+
   </div>
 </section>
 
@@ -342,14 +409,14 @@ footer{text-align:center;background:#3d2b1f;color:#fff;padding:20px}
     }
   });
 
-  // Dynamic calculations & WhatsApp Script
-  let selectedPrice = 490;
-  let selectedWeight = '500 গ্রাম';
-  let deliveryCharge = 70;
+  // Dynamic calculations script
+  let selectedPrice = 650;
+  let selectedWeight = '১ কেজি';
+  let deliveryCharge = 20;
 
   function selectProduct(element, price, weight) {
-    document.querySelectorAll('.product-option').forEach(el => el.classList.remove('selected'));
-    document.querySelectorAll('.product-option input[type="radio"]').forEach(el => el.checked = false);
+    document.querySelectorAll('.product-card').forEach(el => el.classList.remove('selected'));
+    document.querySelectorAll('.product-card input[type="radio"]').forEach(el => el.checked = false);
     
     element.classList.add('selected');
     element.querySelector('input[type="radio"]').checked = true;
@@ -357,39 +424,26 @@ footer{text-align:center;background:#3d2b1f;color:#fff;padding:20px}
     selectedPrice = price;
     selectedWeight = weight;
     
-    if(weight === '2 কেজি') {
-      deliveryCharge = 0;
-      document.querySelectorAll('.shipping-box input').forEach(el => el.checked = false);
-    } else {
-      let currentShip = document.querySelector('input[name="shipping"]:checked');
-      deliveryCharge = currentShip ? parseInt(currentShip.value) : 70;
-    }
-    
     updateCalculation();
   }
 
   function selectShipping(cost) {
-    if(selectedWeight === '2 কেজি') {
-      deliveryCharge = 0;
-    } else {
-      deliveryCharge = cost;
-    }
+    deliveryCharge = cost;
     updateCalculation();
   }
 
   function updateCalculation() {
     let total = selectedPrice + deliveryCharge;
     
-    document.getElementById('summaryProdName').innerText = `Kumro Bori - ${selectedWeight} × 1`;
-    document.getElementById('summaryProdPrice').innerText = `৳ ${selectedPrice}.00`;
-    document.getElementById('summarySubtotal').innerText = `৳ ${selectedPrice}.00`;
-    document.getElementById('summaryDelivery').innerText = `৳ ${deliveryCharge}.00`;
-    document.getElementById('summaryTotal').innerText = `৳ ${total}.00`;
-    
-    document.getElementById('confirmBtn').innerText = `🔒 অর্ডার কনফার্ম ৳ ${total}.00`;
+    document.getElementById('summaryProdName').innerText = `কুমড়ো বড়ি-${selectedWeight}( নিজেদের হাতের তৈরী) × 1`;
+    document.getElementById('summaryProdPrice').innerText = `${selectedPrice}৳`;
+    document.getElementById('summarySubtotal').innerText = `${selectedPrice}৳`;
+    document.getElementById('summaryShipping').innerText = `${deliveryCharge}৳`;
+    document.getElementById('summaryTotal').innerText = `${total}৳`;
+    document.getElementById('btnPrice').innerText = `${total}৳`;
   }
 
-  function sendOrder(e) {
+  function sendOrderToWhatsApp(e) {
     e.preventDefault();
     
     let name = document.getElementById('custName').value;
@@ -398,14 +452,14 @@ footer{text-align:center;background:#3d2b1f;color:#fff;padding:20px}
     let total = selectedPrice + deliveryCharge;
     
     let message = `*নতুন অর্ডার এসেছে!*%0A%0A` +
-                  `*প্রোডাক্ট:* কুমড়া বড়ি (${selectedWeight})%0A` +
-                  `*দাম:* ৳${selectedPrice}%0A` +
-                  `*ডেলিভারি চার্জ:* ৳${deliveryCharge}%0A` +
-                  `*সর্বমোট:* ৳${total}%0A%0A` +
-                  `*কাস্টমারের তথ্য:*%0A` +
+                  `*প্রোডাক্ট:* কুমড়ো বড়ি (${selectedWeight})%0A` +
+                  `*মূল্য:* ${selectedPrice}৳%0A` +
+                  `*ডেলিভারি চার্জ:* ${deliveryCharge}৳%0A` +
+                  `*সর্বমোট:* ${total}৳%0A%0A` +
+                  `*ক্রেতার বিবরণ:*%0A` +
                   `*নাম:* ${name}%0A` +
                   `*ঠিকানা:* ${address}%0A` +
-                  `*ফোন:* ${phone}`;
+                  `*মোবাইল:* ${phone}`;
 
     let whatsappURL = `https://wa.me/8801737326621?text=${message}`;
     window.open(whatsappURL, '_blank');
