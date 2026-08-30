@@ -26,17 +26,18 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
 
 <style>
-  .top-banner-slider {
+.top-banner-slider {
     width: 100%;
     overflow: hidden;
     position: relative;
+    background-color: #fff;
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
 .top-banner-track {
     display: flex;
     width: 200%;
-    animation: slideRightToLeft 12s infinite ease-in-out;
+    animation: continuousSlide 8s linear infinite;
 }
 
 .top-banner-track img {
@@ -45,12 +46,15 @@
     display: block;
 }
 
-@keyframes slideRightToLeft {
-    0% { transform: translateX(100%); }
-    15% { transform: translateX(0%); }
-    85% { transform: translateX(0%); }
-    100% { transform: translateX(-100%); }
+@keyframes continuousSlide {
+    0% {
+        transform: translateX(0%);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
 }
+
 
 *{box-sizing:border-box;margin:0;padding:0}
 body{font-family: 'Hind Siliguri', sans-serif;background:#fffaf0;color:#3d2b1f;line-height:1.7}
@@ -184,8 +188,10 @@ footer{text-align:center;background:#3d2b1f;color:#fff;padding:20px;font-size:16
 
 <header>
   <!-- Top Sliding Banner -->
+<!-- Top Continuous Sliding Banner -->
 <div class="top-banner-slider">
     <div class="top-banner-track">
+        <img src="1788111875147.png" alt="Barirbazar Naogaon Banner">
         <img src="1788111875147.png" alt="Barirbazar Naogaon Banner">
     </div>
 </div>
