@@ -5,31 +5,32 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>খাঁটি কুমড়া বড়ি | রাণীনগর, নওগাঁ</title>
 
-<!-- Swiper Slider CSS -->
+<!-- Google Font (Hind Siliguri) & Swiper CSS -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
 
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
-body{font-family:Arial,"Noto Sans Bengali",sans-serif;background:#fffaf0;color:#3d2b1f;line-height:1.7}
+body{font-family: 'Hind Siliguri', sans-serif;background:#fffaf0;color:#3d2b1f;line-height:1.7}
 header{background:linear-gradient(135deg,#7b3f00,#b86b16);color:white;text-align:center;padding:18px 15px}
-header h1{font-size:30px;margin-bottom:4px} header p{font-size:16px}
+header h1{font-size:32px;font-weight:700;margin-bottom:4px} header p{font-size:17px;font-weight:500}
 
-/* Hero Section Updates */
 .hero{padding:30px 20px;text-align:center;background:#fff0cf}
-.hero h2{font-size:32px;color:#713700;margin-bottom:12px}
-.hero p{max-width:700px;margin:auto;font-size:18px}
+.hero h2{font-size:32px;font-weight:700;color:#713700;margin-bottom:12px}
+.hero p{max-width:700px;margin:auto;font-size:19px;font-weight:500}
 .hero-img {width: 100%; max-width: 320px; border-radius: 16px; margin: 15px auto; display: block; box-shadow: 0 4px 15px rgba(0,0,0,0.15);}
 
-.btn{display:inline-block;margin:10px 7px;padding:14px 28px;border-radius:30px;text-decoration:none;font-weight:bold;cursor:pointer;border:none;}
-.order-btn-top{background:#f25c22;color:#fff;font-size:18px;}
-.wa{background:#25d366;color:#fff;font-size:18px;}
+.btn{display:inline-block;margin:10px 7px;padding:14px 28px;border-radius:30px;text-decoration:none;font-weight:700;cursor:pointer;border:none;}
+.order-btn-top{background:#f25c22;color:#fff;font-size:19px;}
+.wa{background:#25d366;color:#fff;font-size:19px;}
 
 section{max-width:1000px;margin:auto;padding:35px 20px}
-section h2{text-align:center;color:#7b3f00;margin-bottom:22px;font-size:27px}
+section h2{text-align:center;color:#7b3f00;margin-bottom:22px;font-size:28px;font-weight:700}
 .card{background:white;border-radius:16px;padding:25px;box-shadow:0 4px 18px #00000012}
-.story{text-align:center;font-size:17px}
+.story{text-align:center;font-size:18px;font-weight:500}
 
-/* Side-by-Side Media Container (Video + Slider) */
 .media-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -50,13 +51,12 @@ section h2{text-align:center;color:#7b3f00;margin-bottom:22px;font-size:27px}
 }
 
 .features{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
-.feature{text-align:center;padding:22px;background:#fff;border-radius:14px;box-shadow:0 3px 14px #00000010}
-.feature b{display:block;font-size:20px;color:#7b3f00;margin-bottom:6px}
+.feature{text-align:center;padding:22px;background:#fff;border-radius:14px;box-shadow:0 3px 14px #00000010;font-size:16px}
+.feature b{display:block;font-size:20px;color:#7b3f00;margin-bottom:6px;font-weight:700}
 
-/* Form Styles */
 .checkout-section {max-width: 600px; margin: 0 auto; background: #fff; border-radius: 12px; padding: 20px;}
-.alert-red {background-color: #ff3b30; color: white; text-align: center; padding: 12px; font-size: 18px; font-weight: bold; border-radius: 8px; margin-bottom: 15px;}
-.alert-grey {background-color: #b0b5b9; color: #1a1a1a; text-align: center; padding: 12px; font-size: 19px; font-weight: bold; border-radius: 8px; margin-bottom: 25px;}
+.alert-red {background-color: #ff3b30; color: white; text-align: center; padding: 12px; font-size: 19px; font-weight: 700; border-radius: 8px; margin-bottom: 15px;}
+.alert-grey {background-color: #b0b5b9; color: #1a1a1a; text-align: center; padding: 12px; font-size: 19px; font-weight: 700; border-radius: 8px; margin-bottom: 25px;}
 
 .product-card {
   border: 1px solid #dcdcdc;
@@ -73,19 +73,20 @@ section h2{text-align:center;color:#7b3f00;margin-bottom:22px;font-size:27px}
 .product-card input[type="radio"] {margin-right: 15px; transform: scale(1.4); accent-color: #e65100;}
 .product-card img {width: 70px; height: 70px; border-radius: 6px; object-fit: cover; margin-right: 15px;}
 .product-details {flex-grow: 1;}
-.product-title {font-size: 17px; font-weight: bold; color: #222; margin-bottom: 4px;}
-.product-qty {color: #555; font-size: 15px; margin-bottom: 4px;}
-.product-price {font-size: 17px; font-weight: bold; color: #222;}
+.product-title {font-size: 18px; font-weight: 700; color: #222; margin-bottom: 2px;}
+.product-qty {color: #555; font-size: 16px; margin-bottom: 2px;}
+.product-price {font-size: 18px; font-weight: 700; color: #222;}
 
 .form-group {margin-bottom: 18px;}
-.form-group label {display: block; font-weight: bold; margin-bottom: 6px; color: #333; font-size: 15px;}
+.form-group label {display: block; font-weight: 700; margin-bottom: 6px; color: #333; font-size: 16px;}
 .form-group label span {color: red;}
 .form-group input, .form-group textarea, .form-group select {
   width: 100%;
   padding: 12px 15px;
   border: 1px solid #ccc;
   border-radius: 6px;
-  font-size: 15px;
+  font-size: 16px;
+  font-family: 'Hind Siliguri', sans-serif;
   outline: none;
   background: #fff;
 }
@@ -99,23 +100,26 @@ section h2{text-align:center;color:#7b3f00;margin-bottom:22px;font-size:27px}
   justify-content: space-between;
   align-items: center;
   cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
 }
 .shipping-option input {margin-right: 10px; transform: scale(1.2); accent-color: #f25c22;}
 
 .order-summary {margin-top: 25px; border-top: 1px solid #eee; padding-top: 15px;}
-.summary-header {display: flex; justify-content: space-between; font-weight: bold; font-size: 16px; border-bottom: 1px dashed #ddd; padding-bottom: 10px; margin-bottom: 15px;}
-.summary-item {display: flex; align-items: center; justify-content: space-between; margin-bottom: 15px;}
+.summary-header {display: flex; justify-content: space-between; font-weight: 700; font-size: 17px; border-bottom: 1px dashed #ddd; padding-bottom: 10px; margin-bottom: 15px;}
+.summary-item {display: flex; align-items: center; justify-content: space-between; margin-bottom: 15px; font-size: 16px;}
 .summary-item-left {display: flex; align-items: center; gap: 12px;}
 .summary-item img {width: 50px; height: 50px; border-radius: 6px; object-fit: cover;}
-.summary-row {display: flex; justify-content: space-between; margin-bottom: 10px; font-size: 16px;}
-.summary-row.total {font-weight: bold; font-size: 19px; color: #000; border-top: 1px solid #eee; padding-top: 10px;}
+.summary-row {display: flex; justify-content: space-between; margin-bottom: 10px; font-size: 17px;}
+.summary-row.total {font-weight: 700; font-size: 20px; color: #000; border-top: 1px solid #eee; padding-top: 10px;}
 
 .place-order-btn {
   width: 100%;
   background: #f25c22;
   color: white;
-  font-size: 20px;
-  font-weight: bold;
+  font-size: 21px;
+  font-weight: 700;
+  font-family: 'Hind Siliguri', sans-serif;
   padding: 15px;
   border: none;
   border-radius: 30px;
@@ -127,10 +131,10 @@ section h2{text-align:center;color:#7b3f00;margin-bottom:22px;font-size:27px}
   gap: 10px;
 }
 
-footer{text-align:center;background:#3d2b1f;color:#fff;padding:20px}
+footer{text-align:center;background:#3d2b1f;color:#fff;padding:20px;font-size:16px}
 
 @media(max-width:768px){
-  header h1{font-size:25px}.hero h2{font-size:27px}.features{grid-template-columns:1fr}
+  header h1{font-size:26px}.hero h2{font-size:26px}.features{grid-template-columns:1fr}
   .media-grid {grid-template-columns: 1fr;}
   .video-container video, .swiper {height: 300px;}
 }
@@ -143,30 +147,24 @@ footer{text-align:center;background:#3d2b1f;color:#fff;padding:20px}
   <p>নওগাঁর রাণীনগর • খট্টেশ্বরের ঐতিহ্যবাহী স্বাদ</p>
 </header>
 
-<!-- ১. শুরুতে ছবি ও বাটন সেকশন -->
 <div class="hero">
   <h2>মা-বোনদের কোমল হাতের ছোঁয়ায় ❤️</h2>
   <p>ঘরোয়া পদ্ধতিতে যত্ন ও ভালোবাসায় তৈরি আমাদের খাঁটি কুমড়া বড়ি। স্বাদে ঐতিহ্য, তৈরিতে মায়ের হাতের ভালোবাসা।</p>
   
-  <!-- ঢুকেই ছবি -->
   <img src="bori.png" alt="খাঁটি কুমড়া বড়ি" class="hero-img">
   
-  <!-- ছবির নিচে অর্ডার অপশন -->
   <div>
     <a class="btn order-btn-top" href="#order-form-section">🛒 অর্ডার করতে চাই</a> <br>
     <a class="btn wa" href="https://wa.me/8801737326621">💬 +8801737326621</a>
   </div>
 </div>
 
-<!-- ২. ভিডিও ও স্লাইডার পাশাপাশি সেকশন -->
 <section>
   <h2>আমাদের ঐতিহ্য ও তৈরি প্রক্রিয়া</h2>
   <div class="card story">
     <p>প্রথমে ভালো মানের মাসকলাই ভাঙানো হয়। এরপর রাতভর ভিজিয়ে রেখে ভোররাতে পরিবারের সবাই মিলে পাটায় বেটে বড়ির মিশ্রণ তৈরি করা হয়। মা-কাকিদের যত্নের হাতে চাটাইয়ে বড়ি দেওয়া হয় এবং দু’দিন রোদে শুকিয়ে তৈরি হয় আমাদের খাঁটি কুমড়া বড়ি।</p>
 
-    <!-- ভিডিও এবং স্লাইডার এর গ্রিড -->
     <div class="media-grid">
-      <!-- বামে ভিডিও -->
       <div class="video-container">
         <video autoplay muted loop playsinline controls poster="bori.png">
           <source src="InShot_20260829_002652318.mp4" type="video/mp4">
@@ -174,7 +172,6 @@ footer{text-align:center;background:#3d2b1f;color:#fff;padding:20px}
         </video>
       </div>
 
-      <!-- ডানে ছবির স্লাইডার -->
       <div class="swiper mySwiper">
         <div class="swiper-wrapper">
           <div class="swiper-slide"><img src="bori.png" alt="কুমড়া বড়ি"></div>
@@ -212,14 +209,12 @@ footer{text-align:center;background:#3d2b1f;color:#fff;padding:20px}
   </div>
 </section>
 
-<!-- ৩. অর্ডার ফর্ম সেকশন -->
 <section id="order-form-section">
   <div class="card checkout-section">
     
     <div class="alert-red">কুমড়ো বড়ি নিতে অগ্রিম কোন মূল্য পরিশোধ করতে হয়না 💸</div>
     <div class="alert-grey">অর্ডার কনফার্ম করতে নিচের ফর্মটি পূরণ করুন ⤵</div>
 
-    <!-- প্রোডাক্ট ১ -->
     <div class="product-card selected" onclick="selectProduct(this, 650, '১ কেজি')">
       <input type="radio" name="product_select" checked>
       <img src="bori.png" alt="Kumro Bori">
@@ -230,7 +225,6 @@ footer{text-align:center;background:#3d2b1f;color:#fff;padding:20px}
       </div>
     </div>
 
-    <!-- প্রোডাক্ট ২ -->
     <div class="product-card" onclick="selectProduct(this, 1250, '২ কেজি')">
       <input type="radio" name="product_select">
       <img src="bori.png" alt="Kumro Bori">
