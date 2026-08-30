@@ -215,6 +215,18 @@ footer{text-align:center;background:#3d2b1f;color:#fff;padding:20px;font-size:16
     <div class="alert-red">কুমড়ো বড়ি নিতে অগ্রিম কোন মূল্য পরিশোধ করতে হয়না 💸</div>
     <div class="alert-grey">অর্ডার কনফার্ম করতে নিচের ফর্মটি পূরণ করুন ⤵</div>
 
+    <!-- নতুন অপশন: ৫০০ গ্রাম -->
+    <div class="product-card" onclick="selectProduct(this, 350, '৫০০ গ্রাম')">
+      <input type="radio" name="product_select">
+      <img src="bori.png" alt="Kumro Bori">
+      <div class="product-details">
+        <div class="product-title">কুমড়ো বড়ি-৫০০ গ্রাম( নিজেদের হাতের তৈরী)</div>
+        <div class="product-qty">× 1</div>
+        <div class="product-price">350৳</div>
+      </div>
+    </div>
+
+    <!-- প্রোডাক্ট ১: ১ কেজি (ডিফল্ট সিলেক্টেড) -->
     <div class="product-card selected" onclick="selectProduct(this, 650, '১ কেজি')">
       <input type="radio" name="product_select" checked>
       <img src="bori.png" alt="Kumro Bori">
@@ -225,6 +237,7 @@ footer{text-align:center;background:#3d2b1f;color:#fff;padding:20px;font-size:16
       </div>
     </div>
 
+    <!-- প্রোডাক্ট ২: ২ কেজি -->
     <div class="product-card" onclick="selectProduct(this, 1250, '২ কেজি')">
       <input type="radio" name="product_select">
       <img src="bori.png" alt="Kumro Bori">
