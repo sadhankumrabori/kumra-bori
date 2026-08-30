@@ -25,7 +25,6 @@ section h2{text-align:center;color:#7b3f00;margin-bottom:22px;font-size:27px}
 .card{background:white;border-radius:16px;padding:25px;box-shadow:0 4px 18px #00000012}
 .story{text-align:center;font-size:17px}
 
-/* Video & Slider Style */
 .video-container {text-align: center; margin: 25px 0;}
 .video-container video {width: 100%; max-width: 650px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.15);}
 
@@ -44,7 +43,6 @@ section h2{text-align:center;color:#7b3f00;margin-bottom:22px;font-size:27px}
 .feature{text-align:center;padding:22px;background:#fff;border-radius:14px;box-shadow:0 3px 14px #00000010}
 .feature b{display:block;font-size:20px;color:#7b3f00;margin-bottom:6px}
 
-/* --- SCREENSHOT MATCHED ORDER FORM STYLES --- */
 .checkout-section {max-width: 600px; margin: 0 auto; background: #fff; border-radius: 12px; padding: 20px;}
 
 .alert-red {
@@ -232,24 +230,22 @@ footer{text-align:center;background:#3d2b1f;color:#fff;padding:20px}
   <div class="card story">
     <p>প্রথমে ভালো মানের মাসকলাই ভাঙানো হয়। এরপর রাতভর ভিজিয়ে রেখে ভোররাতে পরিবারের সবাই মিলে পাটায় বেটে বড়ির মিশ্রণ তৈরি করা হয়। মা-কাকিদের যত্নের হাতে চাটাইয়ে বড়ি দেওয়া হয় এবং দু’দিন রোদে শুকিয়ে তৈরি হয় আমাদের খাঁটি কুমড়া বড়ি।</p>
 
-    <!-- ভিডিও -->
     <div class="video-container">
-      <video autoplay muted loop playsinline controls poster="1797933102661.png">
+      <video autoplay muted loop playsinline controls poster="bori.png">
         <source src="InShot_20260829_002652318.mp4" type="video/mp4">
         আপনার ব্রাউজারে ভিডিও চলবে না।
       </video>
     </div>
 
-    <!-- ছবি স্লাইডার -->
     <div class="swiper mySwiper">
       <div class="swiper-wrapper">
+        <div class="swiper-slide"><img src="bori.png" alt="কুমড়া বড়ি"></div>
         <div class="swiper-slide"><img src="1787845338733.png" alt="কুমড়া বড়ি"></div>
         <div class="swiper-slide"><img src="1787846665694.png" alt="কুমড়া বড়ি"></div>
         <div class="swiper-slide"><img src="1787847456076.png" alt="কুমড়া বড়ি"></div>
         <div class="swiper-slide"><img src="1787853947266.png" alt="কুমড়া বড়ি"></div>
         <div class="swiper-slide"><img src="1787882127604.png" alt="কুমড়া বড়ি"></div>
         <div class="swiper-slide"><img src="1787882603416.png" alt="কুমড়া বড়ি"></div>
-        <div class="swiper-slide"><img src="1797933102661.png" alt="কুমড়া বড়ি"></div>
       </div>
       <div class="swiper-pagination"></div>
       <div class="swiper-button-next"></div>
@@ -276,7 +272,6 @@ footer{text-align:center;background:#3d2b1f;color:#fff;padding:20px}
   </div>
 </section>
 
-<!-- --- স্ক্রিনশট অনুযায়ী অর্ডার ফর্ম সেকশন --- -->
 <section id="order-form-section">
   <div class="card checkout-section">
     
@@ -286,7 +281,7 @@ footer{text-align:center;background:#3d2b1f;color:#fff;padding:20px}
     <!-- প্রোডাক্ট ১: ১ কেজি -->
     <div class="product-card selected" onclick="selectProduct(this, 650, '১ কেজি')">
       <input type="radio" name="product_select" checked>
-      <img src="1797933102661.png" alt="Kumro Bori">
+      <img src="bori.png" alt="Kumro Bori">
       <div class="product-details">
         <div class="product-title">কুমড়ো বড়ি-১ কেজি( নিজেদের হাতের তৈরী)</div>
         <div class="product-qty">× 1</div>
@@ -297,7 +292,7 @@ footer{text-align:center;background:#3d2b1f;color:#fff;padding:20px}
     <!-- প্রোডাক্ট ২: ২ কেজি -->
     <div class="product-card" onclick="selectProduct(this, 1250, '২ কেজি')">
       <input type="radio" name="product_select">
-      <img src="1797933102661.png" alt="Kumro Bori">
+      <img src="bori.png" alt="Kumro Bori">
       <div class="product-details">
         <div class="product-title">কুমড়ো বড়ি-২ কেজি( নিজেদের হাতের তৈরী)</div>
         <div class="product-qty">× 1</div>
@@ -305,7 +300,6 @@ footer{text-align:center;background:#3d2b1f;color:#fff;padding:20px}
       </div>
     </div>
 
-    <!-- ইনপুট ফর্ম -->
     <form id="orderForm" onsubmit="sendOrderToWhatsApp(event)" style="margin-top: 25px;">
       <div class="form-group">
         <label>আপনার নাম: <span>*</span></label>
@@ -327,7 +321,6 @@ footer{text-align:center;background:#3d2b1f;color:#fff;padding:20px}
         <input type="text" value="Bangladesh" readonly style="background:#f9f9f9; color:#666;">
       </div>
 
-      <!-- শিপিং অপশন -->
       <div class="form-group">
         <label>Shipping</label>
         <div class="shipping-option" onclick="selectShipping(20)">
@@ -344,7 +337,6 @@ footer{text-align:center;background:#3d2b1f;color:#fff;padding:20px}
         </div>
       </div>
 
-      <!-- অর্ডার সামারি -->
       <div class="order-summary">
         <div class="summary-header">
           <span>Product</span>
@@ -353,7 +345,7 @@ footer{text-align:center;background:#3d2b1f;color:#fff;padding:20px}
         
         <div class="summary-item">
           <div class="summary-item-left">
-            <img src="1797933102661.png" alt="Product">
+            <img src="bori.png" id="summaryImg" alt="Product">
             <span id="summaryProdName">কুমড়ো বড়ি-১ কেজি( নিজেদের হাতের তৈরী) × 1</span>
           </div>
           <span id="summaryProdPrice">650৳</span>
@@ -375,7 +367,6 @@ footer{text-align:center;background:#3d2b1f;color:#fff;padding:20px}
         </div>
       </div>
 
-      <!-- অর্ডার প্লেস বাটন -->
       <button type="submit" class="place-order-btn" id="submitBtn">
         🔒 Place Order <span id="btnPrice">670৳</span>
       </button>
@@ -388,7 +379,6 @@ footer{text-align:center;background:#3d2b1f;color:#fff;padding:20px}
   © 2026 খাঁটি কুমড়া বড়ি • রাণীনগর, নওগাঁ
 </footer>
 
-<!-- Swiper JS Script -->
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 <script>
   var swiper = new Swiper(".mySwiper", {
@@ -409,7 +399,6 @@ footer{text-align:center;background:#3d2b1f;color:#fff;padding:20px}
     }
   });
 
-  // Dynamic calculations script
   let selectedPrice = 650;
   let selectedWeight = '১ কেজি';
   let deliveryCharge = 20;
