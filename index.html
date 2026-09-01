@@ -20,7 +20,7 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Kalpurush&family=SolaimanLipi&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Tiro+Bangla:ital@0;1&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
 
     <style>
@@ -30,13 +30,13 @@
             padding: 0;
         }
         body {
-            font-family: 'SolaimanLipi', 'Kalpurush', sans-serif;
+            font-family: 'Tiro Bangla', serif;
             background: #fffaf0;
             color: #3d2b1f;
             line-height: 1.7;
         }
 
-        /* Fixed Top Banner Slider */
+        /* Fixed Top Banner Slider with Ad-style Overlay Text */
         .top-banner-container {
             width: 100%;
             background-color: #111;
@@ -64,7 +64,7 @@
             object-fit: contain;
         }
 
-        /* Advertisement Dynamic Text Overlay - Positioned safely on natural background areas */
+        /* Advertisement Dynamic Text Overlay (Double Size, Bold, Border Outline, Stylish) */
         .banner-ad-overlay {
             position: absolute;
             top: 0;
@@ -74,10 +74,10 @@
             z-index: 10;
             pointer-events: none;
             display: flex;
-            align-items: flex-start;
+            align-items: center;
             justify-content: center;
-            padding-top: 15px;
             overflow: hidden;
+            padding: 15px;
         }
 
         .ad-text {
@@ -93,11 +93,11 @@
             justify-content: center;
         }
 
-        /* Letter Styling with Bold Borders & Outlines */
+        /* Double Size, Bold Border Outline Effect */
         .line-small {
-            font-size: clamp(22px, 4.5vw, 36px);
+            font-size: clamp(24px, 5.5vw, 40px);
             color: #ffffff;
-            font-weight: 700;
+            font-weight: 900;
             text-shadow: 
                 -2px -2px 0 #000,  
                  2px -2px 0 #000,
@@ -105,13 +105,13 @@
                  2px  2px 0 #000,
                  0 0 15px rgba(0,0,0,0.9);
             letter-spacing: 1.5px;
-            margin-bottom: 6px;
+            margin-bottom: 8px;
         }
 
         .line-big {
-            font-size: clamp(34px, 7.5vw, 64px);
+            font-size: clamp(38px, 8.5vw, 70px);
             color: #ffeb3b;
-            font-weight: 700;
+            font-weight: 900;
             line-height: 1.2;
             text-transform: uppercase;
             text-shadow: 
@@ -123,17 +123,7 @@
                  0 0 40px #ff5722;
         }
 
-        /* Letter-by-letter scatter effect containers */
-        .scatter-word {
-            display: inline-block;
-            white-space: nowrap;
-        }
-        .scatter-word span {
-            display: inline-block;
-            transition: transform 0.5s ease, opacity 0.5s ease;
-        }
-
-        /* Sequential Timed Animations with Letter Scattering */
+        /* Sequential Timed Animations */
         .ad-text-1 {
             animation: adAnim1 12s infinite;
         }
@@ -145,25 +135,25 @@
         }
 
         @keyframes adAnim1 {
-            0% { transform: scale(0.3) translateY(20px); opacity: 0; }
+            0% { transform: scale(0.3) translateY(40px); opacity: 0; }
             4% { transform: scale(1.1) translateY(0); opacity: 1; }
             9% { transform: scale(1) translateY(0); opacity: 1; }
             28% { transform: scale(1) translateY(0); opacity: 1; }
-            33% { transform: scale(1.2) translateY(0); opacity: 0; }
-            100% { opacity: 0; }
+            33% { transform: scale(1.4) translateX(-100vw); opacity: 0; }
+            100% { transform: scale(1.4) translateX(-100vw); opacity: 0; }
         }
 
         @keyframes adAnim2 {
-            0%, 33% { transform: scale(1.5) translateY(-20px); opacity: 0; }
+            0%, 33% { transform: scale(2) translateY(-40px); opacity: 0; }
             37% { transform: scale(0.9) translateY(0); opacity: 1; }
             42% { transform: scale(1.05) translateY(0); opacity: 1; }
             61% { transform: scale(1) translateY(0); opacity: 1; }
-            66% { transform: scale(1.2) translateY(0); opacity: 0; }
-            100% { opacity: 0; }
+            66% { transform: scale(0.5) translateY(100vh); opacity: 0; }
+            100% { transform: scale(0.5) translateY(100vh); opacity: 0; }
         }
 
         @keyframes adAnim3 {
-            0%, 66% { transform: scale(0.1) rotate(10deg); opacity: 0; }
+            0%, 66% { transform: scale(0.1) rotate(15deg); opacity: 0; }
             70% { transform: scale(1.1) rotate(0deg); opacity: 1; }
             75% { transform: scale(1) rotate(0deg); opacity: 1; }
             95% { transform: scale(1); opacity: 1; }
@@ -323,7 +313,7 @@
             border: 1px solid #ccc;
             border-radius: 6px;
             font-size: 16px;
-            font-family: 'SolaimanLipi', 'Kalpurush', sans-serif;
+            font-family: 'Tiro Bangla', serif;
             outline: none;
             background: #fff;
         }
@@ -355,7 +345,7 @@
             color: white;
             font-size: 21px;
             font-weight: 700;
-            font-family: 'SolaimanLipi', 'Kalpurush', sans-serif;
+            font-family: 'Tiro Bangla', serif;
             padding: 15px;
             border: none;
             border-radius: 30px;
@@ -387,17 +377,17 @@
     <div class="top-banner-container">
         <div class="banner-ad-overlay">
             <div class="ad-text ad-text-1">
-                <div class="line-small scatter-text">আপনি কি নওগাঁর</div>
-                <div class="line-big scatter-text">খাঁটি কুমড়া বড়ি</div>
-                <div class="line-small scatter-text">অর্ডার করতে চান?</div>
+                <span class="line-small">আপনি কি নওগাঁর</span>
+                <span class="line-big">খাঁটি কুমড়া বড়ি</span>
+                <span class="line-small">অর্ডার করতে চান?</span>
             </div>
             <div class="ad-text ad-text-2">
-                <div class="line-small scatter-text">তাহলে আর দেরি কেনো!</div>
-                <div class="line-big scatter-text" style="color: #ff5722;">সেরা স্বাদের ঐতিহ্য</div>
+                <span class="line-small">তাহলে আর দেরি কেনো!</span>
+                <span class="line-big" style="color: #ff5722;">সেরা স্বাদের ঐতিহ্য</span>
             </div>
             <div class="ad-text ad-text-3">
-                <div class="line-small scatter-text">এখনই নিচের অপশন থেকে</div>
-                <div class="line-big scatter-text" style="color: #00e676;">অর্ডার কনফার্ম করুন</div>
+                <span class="line-small">এখনই নিচের অপশন থেকে</span>
+                <span class="line-big" style="color: #00e676;">অর্ডার কনফার্ম করুন</span>
             </div>
         </div>
 
@@ -587,40 +577,7 @@
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script>
-        // Automatic Letter Splitting for Scatter Animation Effect
-        document.querySelectorAll('.scatter-text').forEach(el => {
-            let text = el.innerText;
-            el.innerHTML = '';
-            for (let char of text) {
-                let span = document.createElement('span');
-                span.innerText = char === ' ' ? '\u00A0' : char;
-                let rx = (Math.random() - 0.5) * 180;
-                let ry = (Math.random() - 0.5) * 180;
-                let rrot = (Math.random() - 0.5) * 70;
-                span.style.setProperty('--rx', rx + 'px');
-                span.style.setProperty('--ry', ry + 'px');
-                span.style.setProperty('--rrot', rrot + 'deg');
-                el.appendChild(span);
-            }
-        });
-
-        // Dynamic Scatter Keyframe Injection
-        const styleSheet = document.styleSheets[0];
-        styleSheet.insertRule(`
-            @keyframes letterScatter {
-                0% { transform: translate(var(--rx), var(--ry)) rotate(var(--rrot)) scale(0.2); opacity: 0; }
-                20% { transform: translate(0, 0) rotate(0deg) scale(1); opacity: 1; }
-                80% { transform: translate(0, 0) rotate(0deg) scale(1); opacity: 1; }
-                100% { transform: translate(var(--rx), var(--ry)) rotate(var(--rrot)) scale(1.5); opacity: 0; }
-            }
-        `, styleSheet.cssRules.length);
-
-        document.querySelectorAll('.scatter-text span').forEach((span, index) => {
-            span.style.animation = `letterScatter 4s infinite ease-in-out`;
-            span.style.animationDelay = (index * 0.05) + 's';
-        });
-
-        // Top Banner Slider Configuration with Autoplay Enabled
+        // Top Banner Slider Configuration
         var topBannerSwiper = new Swiper(".topBannerSwiper", {
             slidesPerView: 1,
             spaceBetween: 0,
