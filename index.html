@@ -37,19 +37,17 @@
             line-height: 1.7;
         }
 
-        /* Fixed Top Banner Slider */
+        /* Fixed Top Banner Slider with Overlay Text */
         .top-banner-container {
             width: 100%;
             background-color: #111;
             box-shadow: 0 4px 10px rgba(0,0,0,0.1);
             overflow: hidden;
+            position: relative;
         }
         .topBannerSwiper {
             width: 100%;
             height: auto;
-        }
-        .topBannerSwiper .swiper-wrapper {
-            transition-timing-function: linear !important;
         }
         .topBannerSwiper .swiper-slide {
             width: 100% !important;
@@ -62,9 +60,86 @@
         .topBannerSwiper .swiper-slide img {
             width: 100%;
             height: auto;
-            max-height: 450px;
+            max-height: 480px;
             display: block;
-            object-fit: contain; /* ছবি যেন কেটে না যায় */
+            object-fit: contain;
+        }
+
+        /* Ad-style Overlay Text Animation on Top Banner */
+        .banner-ad-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 10;
+            pointer-events: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        .ad-text {
+            position: absolute;
+            color: #fff;
+            font-weight: 700;
+            text-align: center;
+            text-shadow: 2px 2px 8px rgba(0,0,0,0.9), 0 0 15px #ff5722;
+            padding: 10px 20px;
+            opacity: 0;
+            width: 90%;
+            left: 5%;
+        }
+
+        /* Text 1 Animation */
+        .ad-text-1 {
+            font-size: clamp(20px, 4.5vw, 36px);
+            background: rgba(0, 0, 0, 0.6);
+            border-radius: 8px;
+            animation: slideText1 10s infinite;
+        }
+
+        /* Text 2 Animation */
+        .ad-text-2 {
+            font-size: clamp(24px, 5.5vw, 42px);
+            color: #ffeb3b;
+            animation: slideText2 10s infinite;
+        }
+
+        /* Text 3 Animation */
+        .ad-text-3 {
+            font-size: clamp(18px, 4vw, 30px);
+            background: rgba(123, 63, 0, 0.85);
+            border-radius: 10px;
+            border: 2px dashed #ffeb3b;
+            animation: slideText3 10s infinite;
+        }
+
+        @keyframes slideText1 {
+            0% { transform: scale(0.5); opacity: 0; }
+            5% { transform: scale(1.2); opacity: 1; }
+            12% { transform: scale(1); opacity: 1; }
+            28% { transform: translateX(0) scale(1); opacity: 1; }
+            33% { transform: translateX(-120vw) scale(1.5); opacity: 0; }
+            100% { transform: translateX(-120vw) scale(1.5); opacity: 0; }
+        }
+
+        @keyframes slideText2 {
+            0%, 33% { transform: scale(0.2) rotate(-10deg); opacity: 0; }
+            38% { transform: scale(1.3) rotate(0deg); opacity: 1; }
+            45% { transform: scale(1); opacity: 1; }
+            61% { transform: scale(1) translateY(0); opacity: 1; }
+            66% { transform: translateY(100vh) scale(0.5); opacity: 0; }
+            100% { transform: translateY(100vh) scale(0.5); opacity: 0; }
+        }
+
+        @keyframes slideText3 {
+            0%, 66% { transform: scale(2); opacity: 0; }
+            71% { transform: scale(1); opacity: 1; }
+            78% { transform: scale(1.05); opacity: 1; }
+            94% { transform: scale(1); opacity: 1; }
+            100% { transform: scale(0.1); opacity: 0; }
         }
 
         /* Header & Hero */
@@ -160,7 +235,7 @@
         .mySwiper .swiper-slide img {
             width: 100%;
             height: 100%;
-            object-fit: contain; /* নিচের স্লাইডারের ছবিও সাইড থেকে কাটা রোধ করতে contain করা হলো */
+            object-fit: contain;
             border-radius: 12px;
         }
 
@@ -281,8 +356,15 @@
 </head>
 <body>
 
-    <!-- Top Sliding Banner -->
+    <!-- Top Sliding Banner with Dynamic Ad Texts -->
     <div class="top-banner-container">
+        <!-- Animated Texts Overlay -->
+        <div class="banner-ad-overlay">
+            <div class="ad-text ad-text-1">আপনি কি নওগাঁর খাঁটি কুমড়া বড়ি অর্ডার করতে চান?</div>
+            <div class="ad-text ad-text-2">তাহলে আর দেরি কেনো!</div>
+            <div class="ad-text ad-text-3">এখনই নিচের অর্ডার অপশনে ক্লিক করে আপনার অর্ডারটি কনফার্ম করুন।</div>
+        </div>
+
         <div class="swiper topBannerSwiper">
             <div class="swiper-wrapper">
                 <div class="swiper-slide"><img src="1788114278805.png" alt="Raninagar Naogaon Banner"></div>
@@ -313,7 +395,7 @@
     <section>
         <h2>আমাদের ঐতিহ্য ও তৈরি প্রক্রিয়া</h2>
         <div class="card story">
-            <p>প্রথমে ভালো মানের মাসকলাই ভাঙানো হয়। এরপর রোদরে ভিজিয়ে রেখে ভোররাতে পরিবারের সবাই মিলে পাঠায় বেটে বড়ির মিশ্রণ তৈরি করা হয়। মা-বোনেরা হাতে তৈরি করে রোদ্রে শুকान।</p>
+            <p>প্রথমে ভালো মানের মাসকলাই ভাঙানো হয়। এরপর রোদরে ভিজিয়ে রেখে ভোররাতে পরিবারের সবাই মিলে পাঠায় বেটে বড়ির মিশ্রণ তৈরি করা হয়। মা-বোনেরা হাতে তৈরি করে রোদ্রে শুকান।</p>
             <div class="media-grid">
                 <div class="video-container">
                     <video autoplay muted loop playsinline controls poster="bori.png">
@@ -473,14 +555,14 @@
     <!-- Swiper JS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script>
-        // Top Banner Slider Configuration (Continuous Smooth Motion)
+        // Slowed down banner speed (speed: 7000 means 7 seconds per slide transition for easy reading)
         var topBannerSwiper = new Swiper(".topBannerSwiper", {
             slidesPerView: 1,
             spaceBetween: 0,
             loop: true,
-            speed: 4000,
+            speed: 1500,
             autoplay: {
-                delay: 0,
+                delay: 4000,
                 disableOnInteraction: false,
             },
         });
@@ -491,7 +573,7 @@
             spaceBetween: 20,
             loop: true,
             autoplay: {
-                delay: 2500,
+                delay: 3000,
                 disableOnInteraction: false,
             },
             pagination: {
